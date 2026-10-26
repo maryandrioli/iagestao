@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IA na gestão escolar</title>
+<link rel="stylesheet" href="assets/estilo.css">
+</head>
+<body>
+<header class="topo">
+  <div class="topo-inner">
+    <p class="sobre">Humus Educação · 5 de novembro de 2026 (quinta-feira) · 9h às 17h</p>
+    <h1>Inteligência artificial na gestão escolar</h1>
+    <p class="sub">Uso estratégico, ético e institucional. Painel de acompanhamento da oficina.</p>
+    <div id="agora" class="agora" aria-live="polite"></div>
+  </div>
+</header>
+
+<section id="prep" class="prep">
+  <div class="prep-inner">
+    <p class="prep-tag">ANTES DA OFICINA · ATÉ 4 DE NOVEMBRO</p>
+    <h2>Prepare-se em três passos</h2>
+    <div class="prep-passos">
+      <article><span class="num">1</span><h3>Instale e teste</h3><p>Contas no Claude, ChatGPT, Gemini e Manus; aplicativo do Claude no computador.</p><a href="00_antes_da_oficina/orientacoes_preparacao_e_instalacao.pdf">Orientações de instalação</a></article>
+      <article><span class="num">2</span><h3>Crie um notebook</h3><p>No NotebookLM, com sua conta Gmail, usando as normativas da pasta do kit.</p><a href="00_antes_da_oficina/orientacoes_notebooklm.pdf">Orientações do NotebookLM</a> · <a href="10_kit_apoio/normativas_leis/">Normativas</a></article>
+      <article><span class="num">3</span><h3>Separe documentos</h3><p>Materiais não confidenciais da sua escola, em PDF ou Word, sem dados pessoais.</p><a href="00_antes_da_oficina/orientacoes_preparacao_e_instalacao.pdf">O que levar</a></article>
+    </div>
+    <p class="prep-rodape"><span id="prep-prog"></span> · <button type="button" data-ir="antes">Abrir a lista de conferência</button></p>
+  </div>
+</section>
+
+<nav class="abas" role="tablist">
+  <button role="tab" data-aba="antes">Antes da oficina</button>
+  <button role="tab" data-aba="programacao" aria-selected="true">Programação</button>
+  <button role="tab" data-aba="produtos">Meus produtos</button>
+  <button role="tab" data-aba="combinados">Combinados</button>
+</nav>
+
+<main>
+  <section id="programacao" class="aba ativa">
+    <p class="intro">Clique em cada bloco para ver o objetivo, o que faremos e os materiais. O bloco em andamento aparece destacado no dia da oficina.</p>
+    <ol id="linha" class="linha"></ol>
+  </section>
+
+  <section id="antes" class="aba">
+    <h2>Preparação</h2>
+    <p>Leia as <a href="00_antes_da_oficina/orientacoes_preparacao_e_instalacao.pdf">orientações de preparação e instalação</a> (também em <a href="00_antes_da_oficina/orientacoes_preparacao_e_instalacao.docx">Word</a>) e as <a href="00_antes_da_oficina/orientacoes_notebooklm.pdf">orientações do NotebookLM</a>, que usam os documentos da pasta <a href="10_kit_apoio/normativas_leis/">10_kit_apoio/normativas_leis</a>. Marque o que já fez. As marcações ficam salvas apenas neste navegador.</p>
+    <ul class="check" data-lista="antes"></ul>
+  </section>
+
+  <section id="produtos" class="aba">
+    <h2>O que você leva ao final do dia</h2>
+    <p>Marque cada produto quando estiver pronto e testado.</p>
+    <ul class="check" data-lista="produtos"></ul>
+    <div class="progresso"><div id="barra"></div></div>
+    <p id="progresso-texto" class="nota"></p>
+  </section>
+
+  <section id="combinados" class="aba">
+    <h2>Combinados do dia</h2>
+    <div class="cartoes">
+      <article><h3>Sem dados pessoais</h3><p>Nenhum nome, nota, laudo ou foto de estudantes, famílias ou funcionários entra nas IAs.</p></article>
+      <article><h3>Dois tempos</h3><p>Primeiro a escola fictícia, coletiva. Depois, seus documentos, só na sua máquina.</p></article>
+      <article><h3>Revisão humana</h3><p>Tudo o que a IA produz é rascunho até uma pessoa responsável conferir.</p></article>
+      <article><h3>Comparar antes de escolher</h3><p>A mesma tarefa em plataformas diferentes: a evidência é do grupo.</p></article>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">Profa. Dra. Mary Grace Pereira Andrioli · materiais de uso dos participantes da oficina Humus Educação</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

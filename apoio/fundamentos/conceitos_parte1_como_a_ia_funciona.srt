@@ -1,0 +1,116 @@
+1
+00:00:05,800 --> 00:00:08,866
+Imagine a Escola Horizonte, uma escola fictícia.
+
+2
+00:00:08,966 --> 00:00:23,637
+A rematrícula de 2027 abre em três semanas, e Mary, a coordenadora administrativa, precisa estimar as vagas, comunicar as famílias, receber as intenções de rematrícula, organizar o atendimento e acompanhar os resultados.
+
+3
+00:00:23,737 --> 00:00:29,790
+Vamos ver como a inteligência artificial pode ajudar em cada etapa, e o que ela precisa para isso.
+
+4
+00:00:31,890 --> 00:00:36,833
+Primeira pergunta de Mary: quantas famílias devem rematricular em cada série?
+
+5
+00:00:36,933 --> 00:00:40,469
+Aqui entra a previsão, que pode acontecer de dois jeitos.
+
+6
+00:00:40,569 --> 00:00:50,696
+Sistemas de gestão e plataformas educacionais usam modelos preditivos treinados com milhares de registros, que aprendem padrões e calculam probabilidades.
+
+7
+00:00:50,796 --> 00:00:58,193
+Já assistentes como o Claude, o ChatGPT e o Gemini são IAs generativas: não têm um modelo preditivo próprio,
+
+8
+00:00:58,293 --> 00:01:06,457
+mas analisam uma planilha com os dados dos anos anteriores, fazem os cálculos e chegam a uma estimativa por série, sempre com uma margem.
+
+9
+00:01:08,557 --> 00:01:16,146
+Para prever, a IA precisa de dados organizados, de um histórico suficiente e de acesso a eles, como uma planilha compartilhada.
+
+10
+00:01:16,246 --> 00:01:20,613
+Se os dados forem poucos ou incompletos, a estimativa também será.
+
+11
+00:01:20,713 --> 00:01:24,206
+Repare que Mary usa números por série, e não por família.
+
+12
+00:01:24,306 --> 00:01:31,105
+Prever quem vai sair a partir de dados pessoais é outro nível de risco, que discutiremos na matriz de riscos.
+
+13
+00:01:31,205 --> 00:01:37,301
+E a estimativa é uma probabilidade: a decisão sobre turmas e vagas continua sendo da escola.
+
+14
+00:01:39,401 --> 00:01:42,232
+Segunda tarefa: o comunicado às famílias.
+
+15
+00:01:42,332 --> 00:01:47,425
+Agora entra a IA generativa, presente em todas as plataformas que vamos usar.
+
+16
+00:01:47,525 --> 00:01:52,831
+Ela produz um texto novo escolhendo, trecho por trecho, a continuação mais provável.
+
+17
+00:01:52,931 --> 00:02:01,266
+Com um pedido curto, o resultado é correto, mas genérico: deixa lacunas, como o prazo, ou pode completá-las com informações que ninguém deu.
+
+18
+00:02:03,366 --> 00:02:09,568
+O que melhora o resultado é o contexto. Mary informa prazos, canais de atendimento, público e tom.
+
+19
+00:02:09,668 --> 00:02:14,633
+Depois anexa o calendário, a tabela oficial de valores e o guia de tom de voz,
+
+20
+00:02:14,733 --> 00:02:21,361
+e acrescenta: use apenas estes documentos, não calcule valores e, se faltar alguma informação, pergunte.
+
+21
+00:02:21,461 --> 00:02:30,671
+Em um projeto do Claude ou do ChatGPT, ou em um Gem do Gemini, essas instruções e documentos ficam salvos e valem para todas as conversas.
+
+22
+00:02:30,771 --> 00:02:34,349
+Quanto mais claro o contexto, menor a chance de invenção.
+
+23
+00:02:34,449 --> 00:02:39,862
+E a conferência final, sobretudo de prazos e valores, continua sendo de quem assina.
+
+24
+00:02:41,962 --> 00:02:47,247
+E se, em vez de pedir um texto de cada vez, Mary pudesse delegar o processo inteiro?
+
+25
+00:02:47,347 --> 00:02:57,026
+Essa é a IA agêntica. Ela recebe um objetivo, planeja as etapas e usa ferramentas, como pastas, agenda, e-mail, formulários e planilhas, para executá-las.
+
+26
+00:02:57,126 --> 00:03:05,589
+As plataformas oferecem isso de formas diferentes, e boa parte desses recursos é de versões pagas, indicadas com o losango verde.
+
+27
+00:03:05,689 --> 00:03:09,865
+Como funciona, e com quais cuidados, é o assunto da segunda parte.
+
+28
+00:03:11,965 --> 00:03:14,241
+Prever, produzir e executar.
+
+29
+00:03:14,341 --> 00:03:19,797
+Na parte dois, vamos acompanhar um agente trabalhando na rematrícula, etapa por etapa.
+

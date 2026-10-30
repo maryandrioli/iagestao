@@ -1,0 +1,128 @@
+1
+00:00:00,800 --> 00:00:03,653
+Com um assistente, Mary conduz cada etapa.
+
+2
+00:00:03,753 --> 00:00:10,147
+Ela pede o comunicado, copia e cola no e-mail. Pede o texto do post, abre a rede social e publica.
+
+3
+00:00:10,247 --> 00:00:13,633
+Pede as perguntas do formulário e monta o formulário.
+
+4
+00:00:13,733 --> 00:00:22,985
+O assistente ajuda muito, e funciona em todas as plataformas, inclusive nas versões gratuitas. Mas quem leva a informação de um lugar para outro é ela.
+
+5
+00:00:25,085 --> 00:00:31,245
+Com um agente, Mary entrega o objetivo: organize a comunicação e o acompanhamento da rematrícula.
+
+6
+00:00:31,345 --> 00:00:40,064
+Para agir, o agente precisa de quatro coisas. O modelo, que raciocina e escreve. Instruções claras, com papel, regras, tom de voz e limites.
+
+7
+00:00:40,164 --> 00:00:47,881
+Acesso às ferramentas: a pasta do projeto, a agenda, o e-mail, o formulário, as redes e a planilha. E aprovações combinadas.
+
+8
+00:00:47,981 --> 00:00:53,735
+No Claude, enviar e-mails e compartilhar ou apagar arquivos pedem aprovação por padrão,
+
+9
+00:00:53,835 --> 00:00:59,589
+e na extensão do navegador você escolhe entre aprovar cada ação ou só as mais sensíveis.
+
+10
+00:00:59,689 --> 00:01:08,621
+Atenção: o que o agente nunca deve fazer não se garante com uma instrução, e sim não dando acesso. Por isso, os dados financeiros das famílias ficam fora.
+
+11
+00:01:10,721 --> 00:01:18,566
+Veja o fluxo. Primeiro, o agente lê a pasta da rematrícula no Drive: o calendário, a tabela de valores e a lista de documentos.
+
+12
+00:01:18,666 --> 00:01:23,759
+Depois, consulta a agenda e propõe os plantões de atendimento, que Mary aprova.
+
+13
+00:01:23,859 --> 00:01:29,271
+Em seguida, prepara o formulário de intenção de rematrícula, pedindo só o necessário.
+
+14
+00:01:29,371 --> 00:01:38,816
+No Claude, ele faz isso pelo navegador, em versão paga. No Gemini, é possível criar o formulário dentro do próprio Google Formulários, em contas elegíveis.
+
+15
+00:01:38,916 --> 00:01:43,689
+Em qualquer plataforma, a IA pode escrever as perguntas para a equipe montar.
+
+16
+00:01:43,789 --> 00:01:49,735
+Por fim, o agente redige o e-mail às famílias com o link e o deixa em rascunho até a aprovação.
+
+17
+00:01:51,835 --> 00:01:56,266
+Na sequência, o agente prepara o post para as redes, com texto e arte.
+
+18
+00:01:56,366 --> 00:02:05,725
+Aqui as plataformas se diferenciam: o ChatGPT e o Gemini geram imagens, enquanto o Claude monta a arte com código ou com o conector do Canva.
+
+19
+00:02:05,825 --> 00:02:09,915
+Depois da aprovação, a publicação é agendada pelo navegador.
+
+20
+00:02:10,015 --> 00:02:17,156
+Um agente não fica vigiando o processo sozinho: ele trabalha quando é acionado. Por isso, Mary cria uma tarefa agendada.
+
+21
+00:02:17,256 --> 00:02:27,469
+Toda segunda-feira, o agente lê as respostas do formulário, atualiza a planilha e envia um relatório com as confirmações por série, comparadas à estimativa inicial.
+
+22
+00:02:27,569 --> 00:02:30,485
+Aqui as três formas de IA trabalham juntas.
+
+23
+00:02:30,585 --> 00:02:37,598
+Se uma série tiver poucas confirmações, o relatório avisa, e quem decide o que fazer, e liga para as famílias, é a equipe.
+
+24
+00:02:39,698 --> 00:02:43,063
+Cada plataforma combina esses recursos de um jeito.
+
+25
+00:02:43,163 --> 00:02:53,055
+Todas têm versão gratuita e se conectam a e-mail, agenda e arquivos. O que muda é o limite de uso, e alguns recursos, como agir em sites, ficam nas versões pagas.
+
+26
+00:02:53,155 --> 00:02:59,016
+Não existe a melhor IA: existe a mais adequada à tarefa, ao orçamento e às regras da escola.
+
+27
+00:02:59,116 --> 00:03:03,953
+O quadro completo, com o que cada uma oferece, está no material de apoio da oficina.
+
+28
+00:03:06,053 --> 00:03:10,015
+Como a rematrícula envolve dados de famílias, o cuidado aumenta.
+
+29
+00:03:10,115 --> 00:03:17,575
+Peça apenas o necessário, use contas da escola e não de uso pessoal, e defina por quanto tempo as respostas serão guardadas.
+
+30
+00:03:17,675 --> 00:03:22,725
+E deixe dados financeiros e informações sensíveis fora das ferramentas de IA.
+
+31
+00:03:24,825 --> 00:03:33,097
+A inteligência artificial prepara, organiza e executa, mas quem revisa, aprova e responde às famílias continua sendo a escola.
+
+32
+00:03:33,197 --> 00:03:42,044
+Na oficina, vamos construir fluxos como este. Acompanhe a página da formação em maryandrioli.github.io/iagestao.
+

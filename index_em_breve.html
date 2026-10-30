@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Página da oficina IA para gestores escolares (Humus Educação): preparação, programação com horários, roteiros de cada atividade e pastas da escola.">
+<meta name="theme-color" content="#0B2236">
+<title>IA para gestores escolares: página da oficina</title>
+<link rel="stylesheet" href="assets/estilo.css">
+<style>
+.em-breve{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:6px;background:#C0392B;color:#fff;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;vertical-align:middle}
+.trancado{color:#55606A;cursor:not-allowed}
+.trancado .fmt{opacity:.6}
+.aviso-em-breve{margin:12px auto;max-width:1100px;padding:12px 16px;border-left:5px solid #C0392B;background:#FDECEA;color:#5A1A13;border-radius:6px}
+</style>
+</head>
+<body>
+<a class="pular" href="#conteudo">Ir para o conteúdo</a>
+
+<header class="topo">
+  <div class="topo-inner">
+    <p class="sobre" id="sobre">Humus Educação · 5 de novembro de 2026 (quinta-feira) · 9h às 17h · Intercity Ibirapuera, São Paulo</p>
+    <h1>IA para gestores escolares: a inteligência artificial na prática da liderança</h1>
+    <p class="sub">Primeiro, compreender. Depois, testar. Por fim, decidir como implementar. Esta página reúne a preparação, a programação do dia e o roteiro de cada atividade.</p>
+    <div id="agora" class="agora" role="status" aria-live="polite"></div>
+  </div>
+</header>
+
+<div class="menu-topo">
+  <nav class="abas" role="tablist" aria-label="Seções da página">
+    <button role="tab" id="tab-antes" aria-controls="antes" data-aba="antes"><span class="n">1</span> Antes da oficina</button>
+    <button role="tab" id="tab-programacao" aria-controls="programacao" data-aba="programacao" aria-selected="true"><span class="n">2</span> Programação e roteiros</button>
+    <button role="tab" id="tab-pastas" aria-controls="pastas" data-aba="pastas"><span class="n">3</span> Pastas da escola</button>
+    <button role="tab" id="tab-produtos" aria-controls="produtos" data-aba="produtos"><span class="n">4</span> O que você leva</button>
+    <button role="tab" id="tab-combinados" aria-controls="combinados" data-aba="combinados"><span class="n">5</span> Combinados e ajuda</button>
+  </nav>
+</div>
+
+<main id="conteudo">
+<p id="aviso-em-breve" class="aviso-em-breve" role="status"></p>
+
+  <!-- ===================== ABA 1: ANTES DA OFICINA ===================== -->
+  <section id="antes" class="aba" role="tabpanel" aria-labelledby="tab-antes">
+    <div class="faixa-prep">
+      <p class="prep-tag">Comece por aqui · até 4 de novembro · cerca de 45 minutos</p>
+      <h2>Prepare-se em quatro passos</h2>
+      <p class="intro">Assista aos dois vídeos, siga os passos e marque a lista de conferência. Com tudo pronto, a oficina começa direto pela prática.</p>
+      <p class="form-prev"><a class="botao" href="roteiros/00_preparacao_antes_da_oficina.pdf" target="_blank" rel="noopener">Roteiro da preparação (PDF)</a></p>
+    </div>
+
+    <div class="videos">
+      <figure class="video-card">
+        <figcaption><span class="chip">Vídeo 1 · 2min46s</span> Como se preparar para a oficina</figcaption>
+        <video controls preload="metadata" playsinline src="apoio/videos_preparacao/video_preparacao_oficina_revisado.mp4">
+          <track kind="subtitles" src="apoio/videos_preparacao/video_preparacao_oficina_revisado.srt" srclang="pt" label="Português">
+        </video>
+      </figure>
+      <figure class="video-card">
+        <figcaption><span class="chip">Vídeo 2 · 2min54s</span> O que você vai aprender</figcaption>
+        <video controls preload="metadata" playsinline src="apoio/videos_preparacao/video_o_que_vai_aprender.mp4">
+          <track kind="subtitles" src="apoio/videos_preparacao/video_o_que_vai_aprender.srt" srclang="pt" label="Português">
+        </video>
+      </figure>
+    </div>
+
+    <div class="prep-passos">
+      <article>
+        <span class="num" aria-hidden="true">1</span>
+        <h3>Contas e aplicativo <small>cerca de 20 minutos</small></h3>
+        <p>Crie contas no Claude, no ChatGPT, no Gemini e no Manus. Instale o aplicativo do Claude e teste com um PDF qualquer. Os planos gratuitos bastam; o símbolo <span class="paid" title="recurso de versão paga">◆</span> indica recursos pagos.</p>
+        <ul class="links"><li><a href="apoio/orientacoes_preparacao_e_instalacao.pdf" target="_blank" rel="noopener">Orientações de preparação e instalação <span class="fmt">PDF</span></a></li></ul>
+      </article>
+      <article>
+        <span class="num" aria-hidden="true">2</span>
+        <h3>Notebook de normativas <small>cerca de 15 minutos</small></h3>
+        <p>No Gemini Notebook (antigo NotebookLM), em <a href="https://notebook.google.com/" target="_blank" rel="noopener">notebook.google.com</a> com a sua conta Google (sem cadastro novo), crie o notebook "Normativas da escola", envie os oito PDFs e faça uma pergunta de teste, conferindo a citação.</p>
+        <ul class="links"><li><a href="apoio/orientacoes_gemini_notebook.pdf" target="_blank" rel="noopener">Orientações do Gemini Notebook <span class="fmt">PDF</span></a></li></ul>
+        <details class="mini"><summary>Os oito PDFs das normativas</summary><ul class="links" id="lista-normativas"></ul></details>
+      </article>
+      <article>
+        <span class="num" aria-hidden="true">3</span>
+        <h3>Pastas da escola <small>cerca de 5 minutos</small></h3>
+        <p>Crie a pasta <code>oficina_IA</code>, baixe o kit (ZIP) e descompacte dentro dela. Você terá as pastas <code>escola_EXEMPLO_horizonte</code> (preenchida) e <code>escola_MODELO_para_preencher</code> (estrutura), usadas em todas as atividades.</p>
+        <p><a id="link-zip-prep" class="botao secundario" href="#" download>Baixar o kit (ZIP)</a></p>
+      </article>
+      <article>
+        <span class="num" aria-hidden="true">4</span>
+        <h3>Opcional: a sua escola <small>quanto quiser</small></h3>
+        <p>Quem quiser trabalhar com a própria escola pode preencher, na pasta MODELO, os documentos 01 a 05 só com informações públicas. Quem não preencher usa a Escola Horizonte.</p>
+        <p class="alerta"><strong>Nunca:</strong> nomes, notas, laudos, fotos ou contatos de estudantes, famílias ou funcionários; contratos assinados; informações financeiras.</p>
+      </article>
+    </div>
+
+    <h2>Lista de conferência</h2>
+    <p class="intro">As marcações ficam salvas apenas neste navegador. <span id="prep-prog" class="destaque"></span></p>
+    <ul class="check" data-lista="antes"></ul>
+    <p class="nota">Dúvidas até 3/11: <a id="contato" href="#">e-mail da formadora</a>, indicando o passo em que encontrou dificuldade. No dia, haverá apoio a partir das 8h45 e contas reserva.</p>
+  </section>
+
+  <!-- ===================== ABA 2: PROGRAMAÇÃO ===================== -->
+  <section id="programacao" class="aba ativa" role="tabpanel" aria-labelledby="tab-programacao">
+    <details class="como-usar" open>
+      <summary>Como usar esta seção</summary>
+      <ul>
+        <li>Cada bloco traz o que você vai fazer e o <strong>roteiro</strong> da atividade (PDF, com versão Word). O roteiro tem o fluxograma, o passo a passo, os prompts e as dicas.</li>
+        <li>Onde há mais de um roteiro (práticas 1, 2 e 3), <strong>escolha um</strong> e faça a sequência completa. Os outros ficam para depois.</li>
+        <li>Lembrete: nenhum dado pessoal de estudantes, famílias ou funcionários entra nas IAs.</li>
+        <li>Os materiais estão sempre nas mesmas <a href="#pastas">pastas da escola</a>: <span class="badge exemplo">Exemplo</span> tudo preenchido (Escola Horizonte, fictícia) · <span class="badge modelo">Modelo</span> só a estrutura, para a sua escola · <span class="paid">◆</span> recurso de versão paga.</li>
+      </ul>
+    </details>
+
+    <div class="barra-acoes">
+      <a id="link-zip" class="botao" href="#" download>Baixar todos os materiais (ZIP, sem vídeos)</a>
+      <button type="button" class="botao secundario" id="expandir">Abrir todos os blocos</button>
+      <button type="button" class="botao secundario" id="recolher">Fechar todos</button>
+    </div>
+
+    <h2>Programação do dia</h2>
+    <ol id="linha" class="linha" aria-label="Blocos da programação"></ol>
+  </section>
+
+  <!-- ===================== ABA 3: PASTAS DA ESCOLA ===================== -->
+  <section id="pastas" class="aba" role="tabpanel" aria-labelledby="tab-pastas">
+    <h2>As mesmas pastas para a oficina inteira</h2>
+    <p class="intro">Todas as atividades usam o mesmo conjunto de onze pastas, em duas versões. Cada roteiro indica quais pastas usar; nenhuma atividade usa todas ao mesmo tempo.</p>
+    <div class="cartoes">
+      <article><h3><span class="badge exemplo">Exemplo</span> escola_EXEMPLO_horizonte</h3><p>Tudo preenchido com a Escola Horizonte, fictícia. Serve para fazer qualquer atividade sem preparar nada e para comparar com o que você produzir.</p><p><a href="materiais/escola_EXEMPLO_horizonte/index.html" target="_blank" rel="noopener">Abrir a pasta</a></p></article>
+      <article><h3><span class="badge modelo">Modelo</span> escola_MODELO_para_preencher</h3><p>Só a estrutura: os mesmos documentos com campos em branco e orientação. Serve para trabalhar com a sua escola, só com informações públicas.</p><p><a href="materiais/escola_MODELO_para_preencher/index.html" target="_blank" rel="noopener">Abrir a pasta</a></p></article>
+    </div>
+    <div class="tabela-rolagem"><table class="tabela-pastas" id="tabela-pastas"><thead><tr><th>Pasta</th><th>O que tem</th><th>Exemplo</th><th>Modelo</th><th>Usada em</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <!-- ===================== ABA 4: PRODUTOS ===================== -->
+  <section id="produtos" class="aba" role="tabpanel" aria-labelledby="tab-produtos">
+    <h2>O que você leva para a sua instituição</h2>
+    <p class="intro">Marque cada produto quando estiver pronto. As marcações ficam salvas apenas neste navegador.</p>
+    <ul class="check" data-lista="produtos"></ul>
+    <div class="progresso" role="progressbar" aria-labelledby="progresso-texto" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="barra"></div></div>
+    <p id="progresso-texto" class="nota"></p>
+    <h2>Depois da oficina</h2>
+    <div class="cartoes">
+      <article><h3>Na primeira semana</h3><p>Refaça o <a href="roteiros/08_laboratorio_individual.pdf" target="_blank" rel="noopener">laboratório individual</a> com outro processo da escola.</p></article>
+      <article><h3>Com a equipe</h3><p>Use o plano de formação de três encontros (pasta 09) e os roteiros desta oficina como atividades.</p></article>
+      <article><h3>Os roteiros que você não fez</h3><p>Cada roteiro funciona sozinho: escolha um por semana.</p></article>
+    </div>
+  </section>
+
+  <!-- ===================== ABA 5: COMBINADOS ===================== -->
+  <section id="combinados" class="aba" role="tabpanel" aria-labelledby="tab-combinados">
+    <h2>Combinados do dia</h2>
+    <div class="cartoes">
+      <article><h3>Sem dados pessoais</h3><p>Nenhum nome, nota, laudo ou foto de estudantes, famílias ou funcionários entra nas IAs. Na dúvida, não anexe.</p></article>
+      <article><h3>Exemplo ou informação pública</h3><p>Use a Escola Horizonte ou documentos públicos da sua escola (site, proposta publicada).</p></article>
+      <article><h3>Revisão humana</h3><p>Tudo o que a IA produz é rascunho até uma pessoa responsável conferir.</p></article>
+      <article><h3>Sequência completa primeiro</h3><p>Faça o roteiro até o fim; as variações vêm depois, se houver tempo.</p></article>
+    </div>
+    <h2>Se algo não funcionar</h2>
+    <div class="cartoes">
+      <article><h3>Não consigo entrar na plataforma</h3><p>Use uma conta reserva ou faça a atividade em dupla.</p></article>
+      <article><h3>A IA inventou um dado</h3><p>É esperado. Volte às fontes e acrescente: "use apenas os documentos anexados".</p></article>
+      <article><h3>Acabou o limite gratuito</h3><p>Troque de plataforma: os prompts funcionam nas quatro.</p></article>
+      <article><h3>Não terminei a atividade</h3><p>Cada roteiro funciona sozinho: continue depois, em casa ou na escola.</p></article>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <p>Profa. Dra. Mary Grace Pereira Andrioli · materiais de uso dos participantes da oficina Humus Educação. A Escola Horizonte é fictícia; nomes, números e valores são inventados.</p>
+  <p class="nota"><a href="#" id="link-pagina">Endereço desta página</a> · <button type="button" class="link-botao" id="imprimir">Imprimir a programação</button></p>
+</footer>
+
+<script src="assets/config.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/em_breve.js"></script>
+</body>
+</html>

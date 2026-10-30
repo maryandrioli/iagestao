@@ -1,0 +1,116 @@
+1
+00:00:00,800 --> 00:00:07,215
+No dia 5 de novembro, você vai passar um dia inteiro aprendendo a usar a inteligência artificial
+
+2
+00:00:07,315 --> 00:00:13,091
+de forma estratégica, ética e segura na gestão da sua escola. Veja como será o percurso.
+
+3
+00:00:15,191 --> 00:00:19,686
+Comunicados, atas, planos para conferir, documentos para atualizar.
+
+4
+00:00:19,786 --> 00:00:24,900
+E se parte desse trabalho pudesse ser preparada por assistentes criados por você,
+
+5
+00:00:25,000 --> 00:00:29,474
+com a identidade da sua escola, e sempre com revisão de quem decide?
+
+6
+00:00:31,574 --> 00:00:40,485
+De manhã, começamos pelos fundamentos: como a inteligência artificial produz respostas, por que ela erra e o que isso muda nas decisões da escola.
+
+7
+00:00:40,585 --> 00:00:46,190
+Você vai conhecer as diferenças entre a IA que prevê, a que produz e a que executa tarefas,
+
+8
+00:00:46,290 --> 00:00:50,785
+e entender por que cada plataforma serve melhor a um tipo de demanda.
+
+9
+00:00:52,885 --> 00:00:58,618
+Em seguida, em duplas, vamos classificar situações reais por probabilidade e gravidade:
+
+10
+00:00:58,718 --> 00:01:02,424
+proteção de dados, vieses e efeitos sobre a equidade.
+
+11
+00:01:02,524 --> 00:01:07,190
+A matriz construída pelo grupo acompanha todas as atividades do dia.
+
+12
+00:01:09,290 --> 00:01:15,513
+Depois, criamos juntos uma escola fictícia, com missão, valores, tom de voz e identidade visual.
+
+13
+00:01:15,613 --> 00:01:20,663
+Assim, todo mundo pode testar, errar e comparar, sem expor nenhum documento real.
+
+14
+00:01:22,763 --> 00:01:26,576
+Na primeira prática, você aprende a estruturar comandos
+
+15
+00:01:26,676 --> 00:01:31,790
+e a criar personas que analisam documentos a partir de perspectivas diferentes.
+
+16
+00:01:31,890 --> 00:01:37,900
+A mesma tarefa será feita em plataformas distintas, para comparar os resultados com evidência.
+
+17
+00:01:40,000 --> 00:01:49,658
+À tarde, você constrói assistentes para a proposta pedagógica, para a comunicação com famílias, equipe e redes sociais, e para rotinas administrativas.
+
+18
+00:01:49,758 --> 00:01:54,488
+E vai ver como funcionam os agentes, que executam várias etapas sozinhos,
+
+19
+00:01:54,588 --> 00:01:57,483
+sempre com um ponto em que uma pessoa aprova.
+
+20
+00:01:59,583 --> 00:02:05,551
+Também vamos transformar um checklist coletivo em um agente revisor de planos e projetos.
+
+21
+00:02:05,651 --> 00:02:11,298
+No laboratório individual, você troca o material fictício pelos documentos da sua escola
+
+22
+00:02:11,398 --> 00:02:14,827
+e observa a diferença que a personalização produz.
+
+23
+00:02:16,927 --> 00:02:20,867
+No fim do dia, discutimos governança e gestão de mudança:
+
+24
+00:02:20,967 --> 00:02:25,505
+política de uso, contas corporativas e formação da equipe docente.
+
+25
+00:02:25,605 --> 00:02:30,975
+Você sai com assistentes testados, um instrumento de validação, a matriz de riscos,
+
+26
+00:02:31,075 --> 00:02:35,763
+o esboço de um roadmap e um plano de ação para os próximos trinta dias.
+
+27
+00:02:37,863 --> 00:02:43,425
+Inteligência artificial na gestão escolar: uso estratégico, ético e institucional.
+
+28
+00:02:43,525 --> 00:02:49,449
+Acompanhe a página da formação em maryandrioli.github.io/iagestao.
+
+29
+00:02:49,549 --> 00:02:51,549
+Nos vemos no dia 5!
+

@@ -1,0 +1,120 @@
+1
+00:00:00,800 --> 00:00:04,591
+Olá! No dia 5 de novembro, das 9h às 17h,
+
+2
+00:00:04,691 --> 00:00:10,573
+vamos passar o dia criando, com inteligência artificial, ferramentas para a gestão da sua escola.
+
+3
+00:00:12,673 --> 00:00:17,062
+Para aproveitar cada minuto, prepare-se antes, em três passos simples.
+
+4
+00:00:17,162 --> 00:00:19,823
+Tudo leva cerca de quarenta minutos.
+
+5
+00:00:21,923 --> 00:00:23,559
+Passo um: as contas.
+
+6
+00:00:23,659 --> 00:00:28,283
+Abra o navegador e acesse claude.ai. Crie sua conta com o seu e-mail.
+
+7
+00:00:28,383 --> 00:00:32,281
+Faça o mesmo no ChatGPT, em chatgpt.com;
+
+8
+00:00:32,381 --> 00:00:37,239
+no Gemini, em gemini.google.com; e no Manus, em manus.im.
+
+9
+00:00:37,339 --> 00:00:41,941
+Os planos gratuitos são suficientes para a maior parte das atividades,
+
+10
+00:00:42,041 --> 00:00:49,843
+porém recomendamos ao menos uma assinatura para realizar as atividades propostas e, neste caso, recomendamos o Claude.
+
+11
+00:00:49,943 --> 00:00:54,843
+Faça a assinatura por apenas um mês para conhecer e testar as possibilidades.
+
+12
+00:00:54,943 --> 00:01:03,279
+Caso tenha dúvidas, experimente usar uma IA como o gemini.google.com e perguntar como instalar e usar as IAs mencionadas.
+
+13
+00:01:05,379 --> 00:01:11,623
+Em seguida, digite claude.com/download e instale o aplicativo no seu computador.
+
+14
+00:01:11,723 --> 00:01:14,512
+Entre com a mesma conta e faça um teste:
+
+15
+00:01:14,612 --> 00:01:20,601
+anexe um PDF qualquer, que não seja da escola, e peça: resuma este documento em cinco linhas.
+
+16
+00:01:22,701 --> 00:01:29,436
+Passo dois: o NotebookLM, uma ferramenta do Google que responde a partir dos documentos que você escolhe.
+
+17
+00:01:29,536 --> 00:01:33,967
+Acesse notebooklm.google e entre com a sua conta Gmail.
+
+18
+00:01:34,067 --> 00:01:41,208
+Crie um novo notebook e adicione as normativas que estão no kit da oficina, como a LDB, o ECA e a LGPD.
+
+19
+00:01:41,308 --> 00:01:44,054
+Dê a ele o nome de Normativas da escola.
+
+20
+00:01:44,154 --> 00:01:50,399
+Agora, faça uma pergunta, por exemplo: quais artigos tratam de dados de crianças e adolescentes?
+
+21
+00:01:50,499 --> 00:01:55,378
+Depois, clique no número da citação e confira o trecho de onde veio a resposta.
+
+22
+00:01:57,478 --> 00:01:59,669
+Passo três: os documentos.
+
+23
+00:01:59,769 --> 00:02:07,017
+Crie no computador uma pasta chamada oficina IA, com três subpastas: documentos da escola, prompts e resultados.
+
+24
+00:02:07,117 --> 00:02:11,100
+Na primeira, coloque materiais públicos ou não confidenciais:
+
+25
+00:02:11,200 --> 00:02:17,338
+missão e valores, proposta pedagógica, um comunicado já enviado e um modelo de plano em branco.
+
+26
+00:02:17,438 --> 00:02:23,853
+Atenção: nada de nomes, notas, laudos, contatos ou fotos de estudantes, famílias ou funcionários.
+
+27
+00:02:25,953 --> 00:02:29,531
+No dia, leve o notebook carregado e com o carregador.
+
+28
+00:02:29,631 --> 00:02:33,273
+A lista completa de conferência está no painel da oficina.
+
+29
+00:02:33,373 --> 00:02:39,298
+Acompanhe a página da formação em: maryandrioli.github.io/iagestao
+
+30
+00:02:39,398 --> 00:02:44,213
+Com tudo pronto, começamos direto pela parte prática. Até o dia 5!
+

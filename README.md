@@ -14,7 +14,7 @@ Versão construída a partir da proposta apresentada aos cursistas (pasta `perfi
 | Pasta | Conteúdo |
 |---|---|
 | `index.html`, `assets/` | Página da oficina. Programação com horários em `assets/app.js` (lista `BLOCOS`); links de formulários e ZIP em `assets/config.js`. |
-| `roteiros/` | 18 roteiros: 00 preparação · 01 acolhida · 02 fundamentos · 03 ética e matriz · 04 documento da escola · 05A/05B/05C Prática 1 · 06A/06B/06C Prática 2 · 07A–07D Prática 3 · 08 laboratório · 09 governança · 10 fechamento |
+| `roteiros/` | 19 roteiros: 00 preparação · 01 acolhida · 02 fundamentos · 03 ética e matriz · 04 documento da escola · 05A/05B/05C/05D Prática 1 · 06A/06B/06C Prática 2 · 07A–07D Prática 3 · 08 laboratório · 09 governança · 10 fechamento |
 | `materiais/escola_EXEMPLO_horizonte/` | 01 perfil · 02 tom de voz · 03 identidade visual · 04 normas · 05 projetos · 06 pedagógico · 07 assistentes · 08 checklists (com documentos de teste e gabarito) · 09 riscos e governança · 10 produções de exemplo · 11 gestão e indicadores (planilha fictícia agregada) |
 | `materiais/escola_MODELO_para_preencher/` | As mesmas 11 pastas, com modelos em branco |
 | `apoio/` | Normativas (8 PDFs), política institucional editável, quadro comparativo, orientações de preparação e do Gemini Notebook, vídeos, slides de fundamentos, formulários de diagnóstico e avaliação (atualizados para as etapas da v3), checklist de anonimização |
@@ -27,7 +27,7 @@ Versão construída a partir da proposta apresentada aos cursistas (pasta `perfi
 | 9h30 | Fundamentos, panorama e cultura de dados | 02 |
 | 10h20 | Ética, inclusão e matriz de riscos | 03 |
 | 11h10 | Documento da escola | 04 |
-| 11h40 | Prática 1 | 05A, 05B ou 05C |
+| 11h40 | Prática 1 | 05A, 05B, 05C ou 05D |
 | 14h | Prática 2 | 06A ou 06B; demonstração 06C |
 | 14h40 | Prática 3 | 07A, 07B, 07C ou 07D |
 | 15h20 | Laboratório individual | 08 |
@@ -66,8 +66,8 @@ Resultado em `analise_critica/verificacao_itens_pesquisa`. Corrigidos: slide do 
 
 ## Página provisória "em breve"
 
-- `index_em_breve.html` (com `assets/em_breve.js`): mesma página, mas os materiais aparecem com a etiqueta vermelha "em breve" e sem link até o dia da oficina. Já ficam abertos: a aba "Antes da oficina", o kit ZIP, os blocos das 9h30 (Fundamentos), 10h20 (Ética e matriz de riscos) e 11h10 (Documento da escola) e as leis de `apoio/normativas_leis`. Acolhida, pastas da escola e "O que você leva" abrem em 5/11; blocos a partir das 11h40, às 11h40. A página se atualiza sozinha na hora da liberação.
-- Para usar: publique `index_em_breve.html` como página de entrada (ou renomeie para `index.html`, guardando a original) e volte à `index.html` depois da oficina. Horários em `assets/em_breve.js`.
+- `index2.html` (antes `index_em_breve.html`; com `assets/em_breve.js`): mesma página, mas os materiais aparecem com a etiqueta vermelha "em breve" e sem link até o dia da oficina. Já ficam abertos: a aba "Antes da oficina", o kit ZIP, os blocos das 9h30 (Fundamentos), 10h20 (Ética e matriz de riscos) e 11h10 (Documento da escola) e as leis de `apoio/normativas_leis`. Acolhida, pastas da escola e "O que você leva" abrem em 5/11; blocos a partir das 11h40, às 11h40. A página se atualiza sozinha na hora da liberação.
+- Para usar: publique `index2.html` como página de entrada (ou renomeie para `index.html`, guardando a original) e volte à `index.html` depois da oficina. Horários em `assets/em_breve.js`.
 - Limite: esconder o link não protege o arquivo. Quem souber o endereço direto, ou olhar o repositório, ainda abre. Para bloquear de fato, só suba as pastas `roteiros`, `materiais` e o ZIP no dia.
 
 ## Slides: visuais e Gemini Notebook (30/10/2026)
@@ -77,12 +77,23 @@ Resultado em `analise_critica/verificacao_itens_pesquisa`. Corrigidos: slide do 
 - Laranja para alertas e decisões (Cuidado, Regra, Modo, frase de prompt); sol como assinatura no encerramento.
 - Gemini Notebook (antigo NotebookLM): acesso em https://notebook.google.com/ com a conta Google, sem cadastro novo. Atualizados roteiros, página, preparação, `apoio/orientacoes_gemini_notebook` (antes `orientacoes_notebooklm`), quadro comparativo, LEIA-ME e formulários de diagnóstico.
 
+## Ajustes a partir do perfil dos participantes (30/10/2026)
+
+Base: respostas ao formulário de inscrição (15 participantes; planilha "CURSO - IA PARA GESTORES ESCOLARES (respostas)").
+
+- **Plano para o dia:** roteiro 00 com a tabela "Qual plano usar" (o que funciona no Claude gratuito e o que fazer quando o limite acaba). Claude Pro recomendado; quem assina ChatGPT, Gemini ou Copilot pode usá-los. Atualizados a página (`index.html`, `index2.html`, lista "Antes da oficina") e `apoio/orientacoes_preparacao_e_instalacao`.
+- **Skills:** novo `apoio/guia_criar_skill_no_claude` (projeto × assistente × skill × agente; ativação; caminho A com a skill-creator; caminho B com SKILL.md e .zip; teste; compartilhamento; ideias). Skill de exemplo em `EXEMPLO/07_assistentes/skill_ata_reuniao` (pasta e .zip) e modelo em `MODELO/07_assistentes/skill_modelo`. Quadro "Projeto ou skill?" nos roteiros 06A, 06B e 07A–07D.
+- **Painel de indicadores:** novo roteiro `05D_pratica1_painel_indicadores` (escolher indicadores, metas, painel como artefato, conferência, leitura, publicação, atualização mensal; alternativas Looker Studio e Excel/Copilot). Exemplo `EXEMPLO/10_producoes/pratica1D_painel_indicadores.html` (abre sem internet). O 05C aponta para o 05D.
+- **Ata de reunião no laboratório:** roteiro 08 com a "Receita rápida: ata de reunião" (passos A a F). Transcrição fictícia para treino `EXEMPLO/10_producoes/lab_transcricao_reuniao_ficticia.txt` (traz de propósito um nome de estudante e uma informação de saúde) e resultado `lab_ata_reuniao_exemplo`.
+
 ## Pendências
 
 1. Criar os formulários (diagnóstico e avaliação) com `apoio/diagnostico_formularios` e colar os links em `assets/config.js`.
-2. Ensaiar os prompts das práticas em conta gratuita para calibrar tempos.
+2. Ensaiar os prompts das práticas em conta gratuita para calibrar tempos, incluindo o roteiro 05D, a receita de ata e o envio da skill de exemplo (menus de skills mudam com as atualizações do Claude).
 3. Os vídeos de preparação (v2) citam o caso da rematrícula e trilhas; regravar se possível.
 4. Slides de fundamentos revisados (28 slides; em 30/10/2026, revisão conceitual: enunciados absolutos qualificados, Referencial do MEC como documento orientador com link, papéis da LGPD, aberto e local, agentes com autonomia variável, triagem com regra prévia para dados sensíveis, critérios de escolha no lugar de marcas, caso de Newark com fontes completas e slide "Saiba mais" com cinco vídeos): sem horário, título da oficina atualizado, slide "O percurso do dia", caso de Newark em dois slides (o caso, com capa e link da matéria do R7, e qual foi o problema) e quatro slides do guia de introdução (bom prompt, a tela de uma IA, modelo/esforço/modo, extensões), cada um com link para o guia completo.
+5. Confirmar com os inscritos quem vai assinar o Claude Pro (no formulário, 10 de 15 não tinham Claude pago).
+6. `apoio/orientacoes_preparacao_e_instalacao` ainda cita a pasta da v2 (01_documentos_escola, 03_caso_rematricula); o roteiro 00 traz a estrutura atual.
 
 ## Como regenerar o kit (ZIP)
 

@@ -7,7 +7,7 @@ const CONFIG = {
   pagina: "https://maryandrioli.github.io/iagestao/",
   links: {
     diagnostico: "https://docs.google.com/forms/d/e/1FAIpQLSeny5UAHrPtvpJhaQVEVveFfWAxiiIb952ux14wn4ZEo0bf8w/viewform?usp=headerm",                   // link curto do formulário 1 (Google Forms): início e fim da oficina
-    avaliacao: "",                     // link curto do formulário 2 (Google Forms): avaliação da oficina
+    avaliacao: "https://docs.google.com/forms/d/e/1FAIpQLScDHMUIwIaJQSU2W1Y0opPgET1SsujGkbQm-HTQzlNzhvkxQg/viewform?usp=header",                     // link curto do formulário 2 (Google Forms): avaliação da oficina
     zip: "kit_oficina_ia_gestores_v3.zip"  // kit completo sem vídeos (gerado na pasta materiais_formacao)
   },
   contato: "maryandrioli@gmail.com"

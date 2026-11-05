@@ -44,6 +44,16 @@ Versão construída a partir da proposta apresentada aos cursistas (pasta `perfi
 - `apoio/normativas_recortes/`: versões curtas para anexar à IA.
 - Novo roteiro 05C (indicadores e relatório para a mantenedora) e pasta 11.
 
+## Ajustes do Roteiro D (4/11/2026)
+
+- Teste de reprodução do painel: seguindo só o roteiro 05D e a planilha de exemplo, o painel saía sem metas, sem semáforo e com outro indicador de atendimento. Foram acrescentados a lista de indicadores do EXEMPLO e o critério das cores.
+- Novo: `materiais/escola_EXEMPLO_horizonte/11_gestao_e_indicadores/indicadores_lista_horizonte` (docx e pdf), com fórmula, fonte, meta, responsável e critério das cores dos quatro indicadores do painel (matrículas, rematrícula, inadimplência e reclamações na secretaria).
+- `indicadores_lista_modelo` (docx e pdf) alinhado ao passo 3 do roteiro: colunas Indicador, Fórmula e fonte, Meta e Responsável, mais o critério das cores.
+- `indicadores_modelo.xlsx`: abas renomeadas como no EXEMPLO (`rematricula_2026`, `atendimento_secretaria`), quarta coluna de atendimento e aviso para manter nomes de abas e colunas.
+- Roteiro 05D (docx e pdf): linha da lista de exemplo na tabela de materiais, critério das cores nos passos 3 e 4, atalho com "reclamações na secretaria" e regra de perguntar quando a lista não disser como calcular.
+- `perfil_da_escola` do EXEMPLO (docx e pdf): "456 estudantes em 2026", coerente com a planilha (antes: "cerca de 420").
+- Pendente (dados fictícios): matrículas, rematrícula e novos estudantes não fecham exatamente em Infantil 5 e 7º ano.
+
 ## Verificação dos itens pesquisados
 
 Resultado em `analise_critica/verificacao_itens_pesquisa`. Corrigidos: slide do caso de Newark (fontes NYT jun. 2023 e CNN ago. 2023), critério do ECA Digital (arts. 1º, 22 e 26; vigência 17/03/2026), nome Gemini Notebook, limites de ChatGPT, Claude e Gemini nos quadros por plataforma. Quadro comparativo (`apoio/`) atualizado em 29/10/2026: Gemini Notebook, Manus independente da Meta, limites de projetos e criação de arquivos. Em 29/10/2026: caso de Newark revisado com a reportagem completa (R7, tradução do NYT) e catálogo de situações de risco com a coluna "Por que é risco". Ainda parciais: limites dos planos gratuitos (ensaiar antes do dia) e créditos do Manus.

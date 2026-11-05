@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Painel de indicadores · Escola Horizonte</title>
+<style>
+  :root{--navy:#0B2236;--teal:#105E6E;--laranja:#F2A541;--texto:#1F3445;--suave:#5B6F80;--linha:#D7E1E8;--fundo:#F5F8FA;
+        --ok:#2E8B3A;--atencao:#B7791F;--fora:#C2410C}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--fundo);color:var(--texto);font-family:Calibri,"Segoe UI",Arial,sans-serif;line-height:1.4}
+  header{background:var(--navy);color:#fff;padding:20px 16px}
+  header .in,main{max-width:1080px;margin:0 auto}
+  header h1{margin:0;font-size:24px}
+  header p{margin:4px 0 0;color:#C9D6E0;font-size:14px}
+  .aviso{background:#FFF4E5;border-left:4px solid var(--laranja);padding:8px 12px;margin:16px 0;font-size:13px}
+  main{padding:0 16px 32px}
+  .cartoes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0}
+  .cartao{background:#fff;border:1px solid var(--linha);border-top:5px solid var(--st);border-radius:8px;padding:12px 14px}
+  .cartao h2{font-size:14px;margin:0;color:var(--suave);font-weight:600}
+  .valor{font-size:30px;font-weight:700;color:var(--navy);margin:2px 0}
+  .var{font-size:13px;color:var(--suave)}
+  .selo{display:inline-block;margin-top:6px;font-size:12px;font-weight:700;color:#fff;background:var(--st);border-radius:10px;padding:1px 9px}
+  .meta{font-size:12px;color:var(--suave);margin-top:4px}
+  .graficos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:12px}
+  .graf{background:#fff;border:1px solid var(--linha);border-radius:8px;padding:12px 14px}
+  .graf h3{margin:0 0 4px;font-size:16px;color:var(--navy)}
+  .graf svg{width:100%;height:auto;display:block}
+  .fonte{font-size:11.5px;color:var(--suave);margin:4px 0 8px}
+  .leitura{border-top:1px solid var(--linha);padding-top:8px;font-size:13.5px}
+  .leitura p{margin:2px 0}
+  .leitura b{color:var(--teal)}
+  .legenda{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--suave);margin-bottom:4px}
+  .legenda i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:-1px}
+  footer{max-width:1080px;margin:0 auto;padding:0 16px 32px;font-size:13px;color:var(--suave)}
+  footer h4{color:var(--navy);margin:16px 0 4px;font-size:14px}
+  footer ul{margin:0;padding-left:18px}
+</style>
+</head>
+<body>
+<header><div class="in">
+  <h1>Painel de indicadores · Escola Horizonte</h1>
+  <p>Reunião mensal com a mantenedora · dados agregados até outubro de 2026</p>
+</div></header>
+<main>
+  <div class="aviso"><b>Exemplo da oficina.</b> Escola e dados fictícios, só agregados (sem nomes, matrículas ou valores por família). Gerado pela IA a partir de <i>indicadores_horizonte_2026.xlsx</i> e conferido célula a célula. As metas são exemplos: a escola define as suas.</div>
+  <section class="cartoes" id="cartoes"></section>
+  <section class="graficos" id="graficos"></section>
+</main>
+<footer>
+  <h4>O que estes dados não permitem afirmar</h4>
+  <ul>
+    <li>Por que a rematrícula do 6º ano foi menor: a planilha não traz o motivo das saídas.</li>
+    <li>Se a inadimplência vai continuar subindo: são nove meses de um único ano.</li>
+    <li>A causa do aumento de reclamações em outubro: a planilha conta, mas não classifica o assunto.</li>
+  </ul>
+  <h4>Como ler</h4>
+  <ul>
+    <li>Cores dos cartões: <b style="color:var(--ok)">dentro da meta</b>, <b style="color:var(--atencao)">atenção</b> (até 10% da meta), <b style="color:var(--fora)">fora da meta</b>.</li>
+    <li>Rematrícula: média simples das séries que podiam rematricular (Infantil 5 ao 9º ano).</li>
+    <li>Receita e inadimplência em índice (previsto = 100), sem valores absolutos.</li>
+  </ul>
+  <p>Fonte: 11_gestao_e_indicadores/indicadores_horizonte_2026.xlsx · Prática 1, roteiro D · Oficina IA para gestores escolares, Humus Educação.</p>
+</footer>
+<script>
+// Dados copiados da planilha (abas matriculas, rematricula_2026, financeiro_agregado, atendimento_secretaria)
+const SERIES = ["Inf 4","Inf 5","1º","2º","3º","4º","5º","6º","7º","8º","9º"];
+const MAT = {2024:[38,40,42,41,40,39,41,46,44,42,40], 2025:[41,39,43,42,41,40,40,44,45,43,39], 2026:[44,40,41,43,42,41,39,41,43,44,38]};
+const REMAT = {"Inf 5":92,"1º":95,"2º":96,"3º":95,"4º":94,"5º":93,"6º":81,"7º":93,"8º":92,"9º":88};
+const MESES = ["fev","mar","abr","mai","jun","jul","ago","set","out"];
+const INAD = [2.5,3.2,3.9,4.8,5.2,6.1,4.4,5.6,6.3];
+const ATEND = {"Declarações e documentos":[120,85,70,64,58,40,90,66,72], "Dúvidas financeiras":[30,22,18,20,25,12,28,24,31], "Transferências":[15,12,10,9,8,6,14,11,16], "Reclamações":[8,6,5,7,6,3,9,8,12]};
+const COR = {teal:"#105E6E", laranja:"#F2A541", navy:"#0B2236", cinza:"#9FB2C1", claro:"#C9D6E0", fora:"#C2410C"};
+const soma = a => a.reduce((x,y)=>x+y,0);
+const fmt = (n,d=0) => n.toLocaleString("pt-BR",{minimumFractionDigits:d,maximumFractionDigits:d});
+
+// ---- cartões
+function status(valor, meta, maiorMelhor){
+  const ok = maiorMelhor ? valor>=meta : valor<=meta;
+  if (ok) return ["Dentro da meta","var(--ok)"];
+  const dist = Math.abs(valor-meta)/meta;
+  return dist<=0.10 ? ["Atenção","var(--atencao)"] : ["Fora da meta","var(--fora)"];
+}
+const tot = y => soma(MAT[y]);
+const rematMedia = soma(Object.values(REMAT))/Object.values(REMAT).length;
+const atendTot = MESES.map((_,i)=>soma(Object.values(ATEND).map(a=>a[i])));
+const CARTOES = [
+  {t:"Estudantes matriculados (2026)", v:fmt(tot(2026)), num:tot(2026), meta:tot(2025), mm:true, metaTxt:"Meta: manter o total de 2025 ("+tot(2025)+")", var:(tot(2026)-tot(2025))+" em relação a 2025 ("+tot(2025)+")"},
+  {t:"Rematrícula média", v:fmt(rematMedia,1)+"%", num:rematMedia, meta:92, mm:true, metaTxt:"Meta: 92% ou mais", var:"Menor: 6º ano, 81%"},
+  {t:"Inadimplência agregada (out)", v:fmt(INAD[8],1)+"%", num:INAD[8], meta:4, mm:false, metaTxt:"Meta: até 4%", var:"+"+fmt(INAD[8]-INAD[7],1)+" p.p. em relação a setembro ("+fmt(INAD[7],1)+"%)"},
+  {t:"Reclamações na secretaria (out)", v:fmt(ATEND["Reclamações"][8]), num:ATEND["Reclamações"][8], meta:8, mm:false, metaTxt:"Meta: até 8 por mês", var:"Maior número do ano; setembro: "+ATEND["Reclamações"][7]},
+];
+document.getElementById("cartoes").innerHTML = CARTOES.map(c=>{
+  const [rot,cor] = status(c.num,c.meta,c.mm);
+  return `<article class="cartao" style="--st:${cor}"><h2>${c.t}</h2><div class="valor">${c.v}</div><div class="var">${c.var}</div><span class="selo">${rot}</span><div class="meta">${c.metaTxt}</div></article>`;
+}).join("");
+
+// ---- gráficos em SVG
+const W=520,H=240,M={t:14,r:12,b:34,l:40};
+const iw=W-M.l-M.r, ih=H-M.t-M.b;
+function eixoY(max, passos, sufixo=""){
+  let g="";
+  for(let i=0;i<=passos;i++){const v=max*i/passos,y=M.t+ih-ih*i/passos;
+    g+=`<line x1="${M.l}" x2="${W-M.r}" y1="${y}" y2="${y}" stroke="#E6EDF2"/><text x="${M.l-6}" y="${y+4}" font-size="11" text-anchor="end" fill="#5B6F80">${fmt(v)}${sufixo}</text>`;}
+  return g;
+}
+function rotX(labels){
+  const bw=iw/labels.length;
+  return labels.map((l,i)=>`<text x="${M.l+bw*i+bw/2}" y="${H-M.b+16}" font-size="11" text-anchor="middle" fill="#5B6F80">${l}</text>`).join("");
+}
+function barrasAgrupadas(labels, grupos, cores, max){
+  const bw=iw/labels.length, n=grupos.length, w=(bw*0.8)/n;
+  let g=eixoY(max,5);
+  labels.forEach((_,i)=>grupos.forEach((arr,j)=>{
+    const h=ih*arr[i]/max, x=M.l+bw*i+bw*0.1+w*j, y=M.t+ih-h;
+    g+=`<rect x="${x}" y="${y}" width="${w-1}" height="${h}" fill="${cores[j]}"><title>${labels[i]}: ${arr[i]}</title></rect>`;}));
+  return `<svg viewBox="0 0 ${W} ${H}" role="img">${g}${rotX(labels)}</svg>`;
+}
+function barras(labels, vals, max, meta, sufixo, destaque){
+  const bw=iw/labels.length;
+  let g=eixoY(max,5,sufixo);
+  vals.forEach((v,i)=>{const h=ih*v/max,x=M.l+bw*i+bw*0.18,y=M.t+ih-h;
+    g+=`<rect x="${x}" y="${y}" width="${bw*0.64}" height="${h}" fill="${destaque(v)?COR.laranja:COR.teal}"><title>${labels[i]}: ${v}${sufixo}</title></rect>
+        <text x="${x+bw*0.32}" y="${y-4}" font-size="10.5" text-anchor="middle" fill="#1F3445">${v}</text>`;});
+  if(meta!=null){const y=M.t+ih-ih*meta/max;
+    g+=`<line x1="${M.l}" x2="${W-M.r}" y1="${y}" y2="${y}" stroke="${COR.navy}" stroke-dasharray="5 4"/><text x="${W-M.r}" y="${y-5}" font-size="11" text-anchor="end" fill="${COR.navy}">meta ${meta}${sufixo}</text>`;}
+  return `<svg viewBox="0 0 ${W} ${H}" role="img">${g}${rotX(labels)}</svg>`;
+}
+function linhas(labels, series, cores, max, meta, sufixo, passos=5){
+  const bw=iw/labels.length;
+  let g=eixoY(max,passos,sufixo);
+  if(meta!=null){const y=M.t+ih-ih*meta/max;
+    g+=`<line x1="${M.l}" x2="${W-M.r}" y1="${y}" y2="${y}" stroke="${COR.navy}" stroke-dasharray="5 4"/><text x="${W-M.r}" y="${y-5}" font-size="11" text-anchor="end" fill="${COR.navy}">meta ${meta}${sufixo}</text>`;}
+  series.forEach((arr,j)=>{
+    const pts=arr.map((v,i)=>[M.l+bw*i+bw/2, M.t+ih-ih*v/max]);
+    g+=`<polyline fill="none" stroke="${cores[j]}" stroke-width="2.5" points="${pts.map(p=>p.join(",")).join(" ")}"/>`;
+    pts.forEach((p,i)=>g+=`<circle cx="${p[0]}" cy="${p[1]}" r="3.5" fill="${cores[j]}"><title>${labels[i]}: ${fmt(arr[i],sufixo?1:0)}${sufixo}</title></circle>`);
+  });
+  return `<svg viewBox="0 0 ${W} ${H}" role="img">${g}${rotX(labels)}</svg>`;
+}
+const leg = itens => `<div class="legenda">${itens.map(([c,t])=>`<span><i style="background:${c}"></i>${t}</span>`).join("")}</div>`;
+const GRAFS = [
+  {t:"Matrículas por série, 2024 a 2026", fonte:"Aba matriculas",
+   svg:leg([[COR.claro,"2024"],[COR.cinza,"2025"],[COR.teal,"2026"]])+barrasAgrupadas(SERIES,[MAT[2024],MAT[2025],MAT[2026]],[COR.claro,COR.cinza,COR.teal],50),
+   fato:"O total ficou estável (453, 457 e 456). O 6º ano caiu de 46 para 41 em três anos; o Infantil 4 subiu de 38 para 44.",
+   perg:"O que a escola sabe sobre a passagem do 5º para o 6º ano?"},
+  {t:"Rematrícula para 2026 por série (%)", fonte:"Aba rematricula_2026 · em laranja, abaixo da meta",
+   svg:barras(Object.keys(REMAT),Object.values(REMAT),100,92,"%",v=>v<92),
+   fato:"Oito das dez séries ficaram entre 92% e 96%. O 6º ano (81%) e o 9º ano (88%) ficaram abaixo da meta.",
+   perg:"Vale ouvir as famílias que não rematricularam no 6º ano antes da próxima campanha?"},
+  {t:"Inadimplência agregada por mês, 2026 (%)", fonte:"Aba financeiro_agregado",
+   svg:linhas(MESES,[INAD],[COR.fora],8,4,"%",4),
+   fato:"Subiu de 2,5% em fevereiro para 6,3% em outubro, com queda em agosto (4,4%). Desde maio está acima da meta.",
+   perg:"Que ações de negociação existem hoje e quando foram usadas?"},
+  {t:"Atendimentos da secretaria por mês, 2026", fonte:"Aba atendimento_secretaria",
+   svg:leg([[COR.teal,"Declarações e documentos"],[COR.laranja,"Dúvidas financeiras"],[COR.cinza,"Transferências"],[COR.fora,"Reclamações"]])+linhas(MESES,Object.values(ATEND),[COR.teal,COR.laranja,COR.cinza,COR.fora],150,null,""),
+   fato:"Fevereiro e agosto são os meses de pico (173 e 141 atendimentos). Em outubro, dúvidas financeiras (31) e reclamações (12) foram as maiores do ano.",
+   perg:"As dúvidas financeiras de outubro têm relação com a inadimplência? Que dado ajudaria a responder?"},
+];
+document.getElementById("graficos").innerHTML = GRAFS.map(g=>`<article class="graf"><h3>${g.t}</h3>${g.svg}<p class="fonte">Fonte: ${g.fonte}</p>
+  <div class="leitura"><p><b>O que o dado mostra:</b> ${g.fato}</p><p><b>Pergunta para a reunião:</b> ${g.perg}</p></div></article>`).join("");
+</script>
+</body>
+</html>

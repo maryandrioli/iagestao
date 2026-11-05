@@ -29,7 +29,7 @@ SEÇÃO 2: título "Perfil e expectativas"; descrição "Esta seção aparece s�
 - "A2. Que etapas a sua escola atende?" Caixas de seleção: Educação Infantil | Anos Iniciais do Ensino Fundamental | Anos Finais do Ensino Fundamental | Ensino Médio
 - "A3. Há quanto tempo você atua na gestão escolar?" Múltipla escolha: Menos de 2 anos | 2 a 5 anos | 6 a 10 anos | Mais de 10 anos
 - "A4. Com que frequência você usa IA no trabalho?" Múltipla escolha: Nunca | Raramente | Algumas vezes por mês | Semanalmente | Diariamente
-- "A5. Quais plataformas de IA você já usou?" Caixas de seleção: Claude | ChatGPT | Gemini | Manus | Copilot | NotebookLM | Nenhuma | Outra
+- "A5. Quais plataformas de IA você já usou?" Caixas de seleção: Claude | ChatGPT | Gemini | Manus | Copilot | Gemini Notebook (NotebookLM) | Nenhuma | Outra
 - "A6. A sua escola tem orientações sobre o uso de IA?" Múltipla escolha: Não | Em discussão | Sim: orientações informais | Sim: documento formal | Não sei
 - "E1. Em que tarefa da sua rotina você gostaria que a IA ajudasse?" Múltipla escolha: Comunicação com famílias | Atas e reuniões | Apoio aos professores | Análise de dados | Documentos institucionais | Outra
 - "E2. Em uma frase: o que você espera da oficina?" Parágrafo, não obrigatória.

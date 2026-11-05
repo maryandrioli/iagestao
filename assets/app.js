@@ -81,7 +81,7 @@ const BLOCOS = [
    roteiros:[{t:"Governança, política e plano de ação", c:R+"09_governanca_plano_de_acao"}],
    materiais:[{t:"Pasta 09 preenchida", c:EX+"09_riscos_e_governanca/", tipo:"exemplo"}, {t:"Pasta 09 para preencher", c:MO+"09_riscos_e_governanca/", tipo:"modelo"}, {t:"Política institucional completa (editável)", c:"apoio/politica_institucional_editavel/"}, {t:"Recortes das normativas para anexar à IA", c:"apoio/normativas_recortes/"}]},
   {ini:"16:40", fim:"17:00", titulo:"Fechamento e materiais de apoio", especial:"fechamento",
-   fazer:"Diagnóstico final, avaliação da oficina e indicação dos materiais de apoio.",
+   fazer:"Diagnóstico final e indicação dos materiais de apoio.",
    roteiros:[{t:"Fechamento e materiais de apoio", c:R+"10_fechamento_materiais_de_apoio"}],
    materiais:[{normativas:true}, {t:"Recortes das normativas para anexar à IA", c:"apoio/normativas_recortes/"}, {t:"Quadro comparativo das plataformas", c:"apoio/quadro_comparativo_plataformas.pdf"}]}
 ];
@@ -145,8 +145,7 @@ function cartaoFormulario(titulo, link, texto, idQr){
 function especial(b){
   const L=CONFIG.links;
   if(b.especial==="diagnostico") return cartaoFormulario("Diagnóstico: início da oficina", L.diagnostico, `Escolha <strong>Início da oficina</strong>. Cerca de 7 minutos, anônimo.<span class="codigo"><strong>Código pessoal:</strong> duas primeiras letras do nome da sua mãe + dia do seu nascimento com dois dígitos (exemplo: MA07). Anote: você vai usá-lo no fechamento.</span>`, "qr-diag-inicio");
-  if(b.especial==="fechamento") return cartaoFormulario("1. Diagnóstico: fim da oficina", L.diagnostico, `Mesmo link da manhã. Escolha <strong>Fim da oficina</strong> e use o <strong>mesmo código pessoal</strong>.`, "qr-diag-fim")
-      + cartaoFormulario("2. Avaliação da oficina", L.avaliacao, `Formulário separado, com o mesmo código pessoal. Cerca de 4 minutos.`, "qr-aval");
+  if(b.especial==="fechamento") return cartaoFormulario("Diagnóstico: fim da oficina", L.diagnostico, `Mesmo link da manhã. Escolha <strong>Fim da oficina</strong> e use o <strong>mesmo código pessoal</strong>.`, "qr-diag-fim");
   return "";
 }
 function montarLinha(){
@@ -235,7 +234,7 @@ function rota(){
   abrirAba(hoje()<DATA_OFICINA?"antes":"programacao");
 }
 function qr(){
-  const alvos=[["qr-diag-inicio",CONFIG.links.diagnostico],["qr-diag-fim",CONFIG.links.diagnostico],["qr-aval",CONFIG.links.avaliacao]].filter(([id,l])=>l&&document.getElementById(id));
+  const alvos=[["qr-diag-inicio",CONFIG.links.diagnostico],["qr-diag-fim",CONFIG.links.diagnostico]].filter(([id,l])=>l&&document.getElementById(id));
   if(!alvos.length) return;
   const s=document.createElement("script"); s.src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js";
   s.onload=()=>alvos.forEach(([id,l])=>{try{new QRCode(document.getElementById(id),{text:l,width:150,height:150,correctLevel:QRCode.CorrectLevel.M});}catch(e){}});

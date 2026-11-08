@@ -16,7 +16,7 @@ Esta pasta é um site estático (pode ser publicado no GitHub Pages) e também p
 
 ## Dados do evento
 
-Edite `config.json` (data, horário, contato e links dos formulários de diagnóstico e avaliação) e rode:
+Edite `config.json` (data, horário, contato) e rode:
 
 ```
 python3 _ferramentas/gerar_pacotes_e_paginas.py

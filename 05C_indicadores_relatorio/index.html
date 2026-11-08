@@ -1,0 +1,80 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Prática 1 · Roteiro C: indicadores de gestão e relatório para a mantenedora | Humus</title><link rel="stylesheet" href="../assets/estilo.css"></head><body>
+<header class="topo"><a class="voltar" href="../index.html#programacao">&larr; Programação</a>
+<h1>Prática 1 · Roteiro C: indicadores de gestão e relatório para a mantenedora</h1>
+<p class="entrega"><strong>Você entrega:</strong> três achados conferidos, um gráfico e um relatório de uma página para a mantenedora.</p>
+</header><main>
+<section class="cartao"><h2>Sobre a atividade</h2>
+<h3>Nesta atividade você vai</h3><p>analisar com a IA uma planilha de indicadores agregados (matrículas, rematrícula, inadimplência e atendimento da secretaria) e transformar a análise em um relatório para a mantenedora.</p>
+<h3>Você vai aprender a</h3><ul><li>pedir à IA que descreva e confira os dados antes de analisar;</li><li>separar achados (com número) de hipóteses e de decisões;</li><li>conferir os números calculados pela IA;</li><li>comparar duas IAs em uma tarefa de dados.</li></ul>
+<h3>Ao final, você terá</h3><ul><li>três achados com números conferidos;</li><li>gráfico;</li><li>relatório de uma página.</li></ul>
+</section>
+<section class="cartao" id="baixar"><h2>Arquivos desta atividade</h2><p>Baixe somente o pacote desta atividade. O zip reúne os documentos editáveis; a pasta abaixo permite visualizar cada arquivo em PDF antes de baixar.</p><div class="botoes">
+<a class="botao" href="pacote_05C_indicadores_relatorio.zip" download>Pacote completo da atividade (zip) <small>342 KB</small></a>
+<a class="botao sec" href="roteiro_05C_indicadores_relatorio.pdf">Roteiro em PDF</a></div>
+<h3>Exemplo preenchido (Escola Horizonte)</h3><ul class="arqs">
+<li><a href="arquivos/exemplo_preenchido/indicadores_horizonte_2026.xlsx">indicadores_horizonte_2026.xlsx</a> <a class="pdf" href="visualizar_pdf/exemplo_preenchido/indicadores_horizonte_2026.pdf">ver em PDF</a> <small>8 KB</small></li>
+<li><a href="arquivos/exemplo_preenchido/perfil_da_escola.docx">perfil_da_escola.docx</a> <a class="pdf" href="visualizar_pdf/exemplo_preenchido/perfil_da_escola.pdf">ver em PDF</a> <small>39 KB</small></li>
+<li><a href="arquivos/exemplo_preenchido/pratica1C_relatorio_indicadores.docx">pratica1C_relatorio_indicadores.docx</a> <a class="pdf" href="visualizar_pdf/exemplo_preenchido/pratica1C_relatorio_indicadores.pdf">ver em PDF</a> <small>38 KB</small></li>
+</ul>
+<h3>Para preencher com a sua escola</h3><ul class="arqs">
+<li><a href="arquivos/para_preencher/indicadores_modelo.xlsx">indicadores_modelo.xlsx</a> <a class="pdf" href="visualizar_pdf/para_preencher/indicadores_modelo.pdf">ver em PDF</a> <small>7 KB</small></li>
+<li><a href="arquivos/para_preencher/perfil_da_escola.docx">perfil_da_escola.docx</a> <a class="pdf" href="visualizar_pdf/para_preencher/perfil_da_escola.pdf">ver em PDF</a> <small>38 KB</small></li>
+</ul>
+</section>
+<section class="cartao" id="prompts"><h2>Prompts desta atividade</h2><p>Copie o texto, troque o que está entre [colchetes] pelos dados da sua escola e apague os colchetes. O passo a passo completo está no roteiro em PDF.</p>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> A conferência da planilha antes da análise: o que cada aba mede e o que está faltando ou estranho, para evitar conclusões sobre dados mal lidos.</p>
+<p><strong>Anexe ou cite:</strong> Nada novo: use a conversa do projeto criado no passo 1, com a planilha de indicadores (exemplo preenchido da Escola Horizonte ou a planilha agregada da sua escola, sem dados individuais) e o perfil da escola.</p>
+<button class="copiar" type="button" data-alvo="p0">Copiar prompt</button><pre id="p0">Papel: você é a <mark>[coordenação administrativo-financeira]</mark> da <mark>[Escola Horizonte]</mark>.
+Contexto: vamos preparar um relatório de uma página para a mantenedora. Antes da análise, preciso entender exatamente o que a planilha contém.
+Fontes: use apenas a planilha anexada e o perfil da escola. Não use dados externos.
+Tarefa: descreva cada aba da planilha e identifique problemas.
+Passos: (1) para cada aba, informe o que mede, o período, a unidade e o número de linhas; (2) aponte dados faltantes, valores fora do padrão e colunas ambíguas; (3) liste as perguntas que você precisaria que eu respondesse para interpretar corretamente.
+Formato: uma seção por aba, em tópicos curtos, e uma lista final de pendências.
+Limites: não tire conclusões ainda; não calcule indicadores; se algo não estiver claro, pergunte.
+Verificação final: confirme que todas as abas foram descritas.</pre></article>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> Os achados que sustentarão o relatório, cada um com o número, a aba e as células de origem, mais um gráfico do achado principal.</p>
+<p><strong>Anexe ou cite:</strong> Nada novo: continue na mesma conversa, depois de responder às pendências do passo anterior.</p>
+<button class="copiar" type="button" data-alvo="p1">Copiar prompt</button><pre id="p1">Papel: continue como <mark>[coordenação administrativo-financeira]</mark> da <mark>[Escola Horizonte]</mark>.
+Contexto: o relatório será lido pela <mark>[mantenedora]</mark>, que decide sobre prioridades e recursos.
+Fontes: use apenas a planilha anexada e minhas respostas às pendências.
+Tarefa: aponte os <mark>[3]</mark> achados mais relevantes para a <mark>[mantenedora]</mark>.
+Para cada achado informe: o enunciado em uma frase; o número que o sustenta; a aba e as células de onde vem; a comparação usada (período anterior, meta ou outra); o grau de certeza (fato ou hipótese).
+Depois, crie um gráfico (artefato ou imagem) para o achado principal, com título claro, eixos nomeados e fonte.
+Critérios: separe fatos (números) de hipóteses (explicações possíveis); não relacione causa e efeito sem evidência.
+Limites: se a planilha não permitir uma conclusão, diga isso em vez de supor.
+Verificação final: refaça os cálculos do achado principal e indique o resultado.</pre></article>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> O relatório de uma página para a mantenedora, com achados, hipóteses, decisões propostas e limites dos dados.</p>
+<p><strong>Anexe ou cite:</strong> Nada novo: continue na mesma conversa. Use somente depois de conferir os números no passo anterior.</p>
+<button class="copiar" type="button" data-alvo="p2">Copiar prompt</button><pre id="p2">Papel: você é a diretoria da <mark>[Escola Horizonte]</mark> escrevendo para a <mark>[mantenedora]</mark>.
+Contexto: o relatório acompanhará a reunião de <mark>[mês/ano]</mark> e precisa caber em uma página.
+Fontes: achados conferidos, gráfico e planilha. Não inclua números que não tenham sido conferidos.
+Tarefa: escreva o relatório com as seguintes seções: (1) três achados, cada um com número e fonte; (2) hipóteses a confirmar; (3) <mark>[3]</mark> decisões propostas, com responsável sugerido; (4) o que os dados não permitem afirmar.
+Critérios: tom objetivo e institucional; frases curtas; sem jargão estatístico; sem adjetivos desnecessários.
+Formato: documento de uma página com títulos curtos, pronto para colar em um editor de texto.
+Verificação final: confirme que todos os números do texto aparecem nos achados conferidos.</pre></article>
+<article class="prompt"><h3>Variação 1: plano de ação</h3>
+<p><strong>O que você vai obter:</strong> Um plano de ação construído a partir dos achados do relatório.</p>
+<p><strong>Anexe ou cite:</strong> Nada novo: continue na mesma conversa.</p>
+<button class="copiar" type="button" data-alvo="p3">Copiar prompt</button><pre id="p3">Tarefa: transforme os achados e as decisões propostas em um plano de ação para os próximos <mark>[90 dias]</mark>.
+Formato: tabela com as colunas ação, responsável (função, não nome), prazo, recurso necessário, indicador de acompanhamento, meta.
+Critérios: ações verificáveis; no máximo <mark>[6]</mark> ações; cada ação ligada a um achado.
+Limites: não invente valores de orçamento.</pre></article>
+<article class="prompt"><h3>Variação 2: slides</h3>
+<p><strong>O que você vai obter:</strong> Slides para a reunião com a mantenedora.</p>
+<p><strong>Anexe ou cite:</strong> Nada novo: continue na mesma conversa.</p>
+<button class="copiar" type="button" data-alvo="p4">Copiar prompt</button><pre id="p4">Tarefa: transforme o relatório em <mark>[5]</mark> slides para a reunião da mantenedora.
+Critérios: um gráfico por slide; título que enuncia a conclusão; no máximo 3 tópicos por slide; números com fonte.
+Formato: artefato de slides, com notas de fala de até 3 frases por slide.
+Limites: use somente números já conferidos.</pre></article>
+<article class="prompt"><h3>Variação 3: painel mensal</h3>
+<p><strong>O que você vai obter:</strong> Uma proposta de painel mensal de indicadores. Para construir o painel visual, siga o roteiro 05D.</p>
+<p><strong>Anexe ou cite:</strong> Nada novo: continue na mesma conversa.</p>
+<button class="copiar" type="button" data-alvo="p5">Copiar prompt</button><pre id="p5">Tarefa: proponha um painel mensal com <mark>[5]</mark> indicadores para acompanhar as decisões do relatório.
+Formato: tabela com as colunas indicador, fórmula de cálculo, fonte dos dados, periodicidade, responsável pela atualização, meta.
+Limites: use apenas dados que a escola já coleta; indique o que seria necessário coletar a mais.</pre></article>
+</section>
+<p class="rodape-voltar"><a class="botao sec" href="../index.html#programacao">&larr; Voltar à programação</a></p></main><footer>Humus Educação · Oficina "IA para gestores escolares" · Prof.ª Dr.ª Mary Grace Pereira Andrioli</footer>
+<script src="../assets/copiar.js"></script></body></html>

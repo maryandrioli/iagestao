@@ -1,0 +1,92 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Prática 1 · Roteiro D: painel de indicadores | Humus</title><link rel="stylesheet" href="../assets/estilo.css"></head><body>
+<header class="topo"><a class="voltar" href="../index.html#programacao">&larr; Programação</a>
+<h1>Prática 1 · Roteiro D: painel de indicadores</h1>
+<p class="entrega"><strong>Você entrega:</strong> um painel visual de uma página, com indicadores, metas e números conferidos, pronto para a reunião mensal.</p>
+</header><main>
+<section class="cartao"><h2>Sobre a atividade</h2>
+<h3>Nesta atividade você vai</h3><p>transformar a planilha de indicadores agregados em um painel visual (cartões, gráficos e leitura de cada indicador) que a direção e a mantenedora acompanham todo mês.</p>
+<h3>Você vai aprender a</h3><ul><li>escolher poucos indicadores, cada um com fórmula, fonte e meta;</li><li>pedir à IA um painel como artefato e conferir cada número;</li><li>separar a leitura do dado (fato) das perguntas para a reunião;</li><li>atualizar o painel no mês seguinte sem refazer tudo.</li></ul>
+<h3>Ao final, você terá</h3><ul><li>lista de indicadores com fórmula e meta;</li><li>painel em HTML (arquivo ou link);</li><li>números conferidos com a planilha.</li></ul>
+</section>
+<section class="cartao" id="baixar"><h2>Arquivos desta atividade</h2><p>Baixe somente o pacote desta atividade. O zip reúne os documentos editáveis; a pasta abaixo permite visualizar cada arquivo em PDF antes de baixar.</p><div class="botoes">
+<a class="botao" href="pacote_05D_painel_indicadores.zip" download>Pacote completo da atividade (zip) <small>400 KB</small></a>
+<a class="botao sec" href="roteiro_05D_painel_indicadores.pdf">Roteiro em PDF</a></div>
+<h3>Exemplo preenchido (Escola Horizonte)</h3><ul class="arqs">
+<li><a href="arquivos/exemplo_preenchido/indicadores_horizonte_2026.xlsx">indicadores_horizonte_2026.xlsx</a> <a class="pdf" href="visualizar_pdf/exemplo_preenchido/indicadores_horizonte_2026.pdf">ver em PDF</a> <small>8 KB</small></li>
+<li><a href="arquivos/exemplo_preenchido/indicadores_lista_horizonte.docx">indicadores_lista_horizonte.docx</a> <a class="pdf" href="visualizar_pdf/exemplo_preenchido/indicadores_lista_horizonte.pdf">ver em PDF</a> <small>38 KB</small></li>
+<li><a href="arquivos/exemplo_preenchido/perfil_da_escola.docx">perfil_da_escola.docx</a> <a class="pdf" href="visualizar_pdf/exemplo_preenchido/perfil_da_escola.pdf">ver em PDF</a> <small>39 KB</small></li>
+<li><a href="arquivos/exemplo_preenchido/pratica1D_painel_indicadores.html">pratica1D_painel_indicadores.html</a> <small>11 KB</small></li>
+</ul>
+<h3>Para preencher com a sua escola</h3><ul class="arqs">
+<li><a href="arquivos/para_preencher/indicadores_lista_modelo.docx">indicadores_lista_modelo.docx</a> <a class="pdf" href="visualizar_pdf/para_preencher/indicadores_lista_modelo.pdf">ver em PDF</a> <small>38 KB</small></li>
+<li><a href="arquivos/para_preencher/indicadores_modelo.xlsx">indicadores_modelo.xlsx</a> <a class="pdf" href="visualizar_pdf/para_preencher/indicadores_modelo.pdf">ver em PDF</a> <small>7 KB</small></li>
+<li><a href="arquivos/para_preencher/perfil_da_escola.docx">perfil_da_escola.docx</a> <a class="pdf" href="visualizar_pdf/para_preencher/perfil_da_escola.pdf">ver em PDF</a> <small>38 KB</small></li>
+</ul>
+</section>
+<section class="cartao" id="prompts"><h2>Prompts desta atividade</h2><p>Copie o texto, troque o que está entre [colchetes] pelos dados da sua escola e apague os colchetes. O passo a passo completo está no roteiro em PDF.</p>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> A lista de indicadores do painel, cada um com pergunta, fórmula e fonte. É a decisão mais importante: o painel mostrará somente o que for escolhido aqui.</p>
+<p><strong>Anexe ou cite:</strong> A planilha de indicadores (exemplo preenchido da Escola Horizonte ou a planilha agregada da sua escola, sem dados individuais) e o perfil da escola, na conversa do projeto criado no passo 1.</p>
+<button class="copiar" type="button" data-alvo="p0">Copiar prompt</button><pre id="p0">Papel: você apoia a <mark>[direção]</mark> da <mark>[Escola Horizonte]</mark> no acompanhamento mensal da gestão.
+Contexto: o painel será usado em reunião mensal com a <mark>[mantenedora]</mark>, para decidir prioridades. Ele deve caber em uma página.
+Fontes: use somente a planilha e o perfil anexados. Se faltar informação relevante, não invente: pergunte antes de prosseguir.
+Tarefa: proponha de <mark>[4 a 6]</mark> indicadores para o painel mensal.
+Para cada indicador informe: nome; pergunta que ele responde; fórmula de cálculo; aba e colunas de origem; frequência de atualização; meta sugerida, marcada como <mark>[A DEFINIR PELA ESCOLA]</mark>; limitação do dado.
+Critérios: indicadores calculáveis com a planilha; preferir poucos e acionáveis; evitar indicadores que dependam de dados individuais.
+Formato: tabela com as colunas acima. Ao final, liste os dados que faltariam para incluir outros indicadores relevantes.
+Limites: não proponha indicador que a planilha não permita calcular.
+Verificação final: confirme que cada fórmula usa colunas que existem na planilha.</pre></article>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> O painel visual da reunião mensal, em um arquivo que abre no navegador.</p>
+<p><strong>Anexe ou cite:</strong> Nada novo: continue na mesma conversa, com a planilha já anexada. Cole no prompt a lista de indicadores aprovada no passo anterior (ou a lista indicadores_lista_horizonte, do exemplo).</p>
+<button class="copiar" type="button" data-alvo="p1">Copiar prompt</button><pre id="p1">Papel: você é o analista de dados e desenvolvedor web da <mark>[Escola Horizonte]</mark>.
+Contexto: o painel será apresentado à <mark>[mantenedora]</mark> na reunião mensal.
+Fontes: planilha anexada e a lista de indicadores abaixo. Se a lista não disser como calcular um indicador, pergunte antes.
+Lista de indicadores e metas: <mark>[cole a lista do passo anterior]</mark>
+Tarefa: crie um painel de indicadores como artefato HTML de uma página.
+Estrutura: no topo, um cartão por indicador, com o valor do último mês, a variação em relação ao mês ou ao ano anterior e um sinal de cor; abaixo, um gráfico por indicador (linha para série no tempo, barras para comparar categorias), com título que diz o que o gráfico mostra e nota com a aba de origem; no rodapé, &quot;Dados agregados até <mark>[mês]</mark>&quot; e o que os dados não permitem afirmar.
+Regras de cor: dentro da meta; atenção, quando o valor ultrapassa a meta em até 10% da própria meta; fora da meta, acima disso. Indicador sem meta: cor neutra e seta de tendência. Não use apenas cor para indicar o estado (inclua também texto ou ícone).
+Especificações: cores da escola <mark>[#105E6E e #F2A541]</mark>; abrir no navegador sem internet; sem dados individuais.
+Limites: se algum valor não puder ser calculado com a planilha, mostre &quot;sem dado&quot; em vez de estimar.
+Verificação final: liste, para cada cartão, o valor e a célula de origem, para que eu confira.</pre></article>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> Uma leitura curta que separa o fato da interpretação e prepara a discussão da reunião.</p>
+<p><strong>Anexe ou cite:</strong> Nada novo: continue na mesma conversa, com o painel gerado.</p>
+<button class="copiar" type="button" data-alvo="p2">Copiar prompt</button><pre id="p2">Papel: você é o assessor de dados da <mark>[direção]</mark>.
+Tarefa: para cada gráfico do painel, escreva abaixo dele duas linhas: &quot;O que o dado mostra&quot; (somente fatos, com número) e &quot;Pergunta para a reunião&quot; (uma pergunta aberta, não uma conclusão).
+Critérios: frases curtas; sem causalidade não sustentada pela planilha; sem adjetivos.
+Limites: não explique causas que a planilha não mostra.
+Formato: devolva o painel completo atualizado.</pre></article>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> O painel do mês seguinte, sem refazer o trabalho, com a lista do que mudou.</p>
+<p><strong>Anexe ou cite:</strong> A planilha do novo mês, na mesma estrutura, na conversa do projeto em que o painel foi criado.</p>
+<button class="copiar" type="button" data-alvo="p3">Copiar prompt</button><pre id="p3">Contexto: o painel do mês anterior foi aprovado. Agora preciso atualizá-lo com os dados de <mark>[novembro]</mark>.
+Fontes: planilha nova anexada.
+Tarefa: atualize o painel mantendo o layout, os indicadores e as metas.
+Passos: (1) confira se as abas e colunas são as mesmas do mês anterior; se não forem, pergunte antes de atualizar; (2) recalcule cada indicador; (3) liste o que mudou em cada cartão (valor anterior, novo valor, mudança de cor).
+Formato: painel atualizado e tabela de mudanças.
+Verificação final: informe os valores que você não conseguiu calcular.</pre></article>
+<article class="prompt"><h3>Variação 1: painel pedagógico</h3>
+<p><strong>O que você vai obter:</strong> Um painel para a coordenação pedagógica acompanhar as séries.</p>
+<p><strong>Anexe ou cite:</strong> Uma planilha agregada por série, sem notas individuais.</p>
+<button class="copiar" type="button" data-alvo="p4">Copiar prompt</button><pre id="p4">Papel: você apoia a <mark>[coordenação pedagógica]</mark> da <mark>[Escola Horizonte]</mark>.
+Tarefa: crie a versão pedagógica do painel, com frequência média e resultados de avaliação por série, usando os dados agregados anexados.
+Estrutura: um cartão por série e um gráfico comparativo; ao final de cada bloco, uma pergunta para o conselho de classe.
+Limites: nenhum dado individual; sem ranking de turmas ou professores; mostrar &quot;sem dado&quot; quando faltar informação.</pre></article>
+<article class="prompt"><h3>Variação 2: painel da secretaria</h3>
+<p><strong>O que você vai obter:</strong> Um painel para planejar a equipe da secretaria nos meses de pico.</p>
+<p><strong>Anexe ou cite:</strong> Nada novo: use a aba de atendimento da secretaria da mesma planilha.</p>
+<button class="copiar" type="button" data-alvo="p5">Copiar prompt</button><pre id="p5">Papel: você apoia a <mark>[secretaria]</mark> da <mark>[Escola Horizonte]</mark>.
+Tarefa: crie a versão da secretaria do painel, com atendimentos por tipo e por mês, destacando o mês de maior demanda.
+Acrescente: uma sugestão de resposta padrão para o tipo de atendimento mais frequente, em até 5 linhas, no tom de voz da escola.
+Limites: não use dados individuais; indique a aba de origem de cada número.</pre></article>
+<article class="prompt"><h3>Variação 3: painel reutilizável</h3>
+<p><strong>O que você vai obter:</strong> Um painel que você mesmo atualiza todo mês, carregando o arquivo exportado do sistema.</p>
+<p><strong>Anexe ou cite:</strong> Nada novo: continue na mesma conversa.</p>
+<button class="copiar" type="button" data-alvo="p6">Copiar prompt</button><pre id="p6">Tarefa: acrescente ao painel um botão para carregar um arquivo .csv com as mesmas colunas da planilha, atualizando os números sem nova solicitação à IA.
+Critérios: validar se as colunas esperadas existem e mostrar mensagem clara quando faltarem; manter o layout e as regras de cor.
+Limites: os dados devem permanecer somente no navegador; nada deve ser enviado pela internet.
+Verificação final: descreva em 3 passos como atualizar o painel todo mês.</pre></article>
+</section>
+<p class="rodape-voltar"><a class="botao sec" href="../index.html#programacao">&larr; Voltar à programação</a></p></main><footer>Humus Educação · Oficina "IA para gestores escolares" · Prof.ª Dr.ª Mary Grace Pereira Andrioli</footer>
+<script src="../assets/copiar.js"></script></body></html>

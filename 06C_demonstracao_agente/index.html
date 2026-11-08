@@ -1,0 +1,61 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Demonstração: agente que executa tarefas com aprovação | Humus</title><link rel="stylesheet" href="../assets/estilo.css"></head><body>
+<header class="topo"><a class="voltar" href="../index.html#programacao">&larr; Programação</a>
+<h1>Demonstração: agente que executa tarefas com aprovação</h1>
+<p class="entrega"><strong>Você entrega:</strong> anotações sobre o que um agente faz, onde pede aprovação e que tarefa da sua escola poderia ser delegada.</p>
+</header><main>
+<section class="cartao"><h2>Sobre a atividade</h2>
+<h3>Nesta atividade você vai</h3><p>acompanhar um agente de IA planejando e executando várias etapas em outros sistemas (Drive, Formulários, Agenda, Gmail) e, se tiver plano pago, experimentar um mini-agente.</p>
+<h3>Você vai aprender a</h3><ul><li>diferenciar assistente (você conduz) de agente (ele conduz, você aprova);</li><li>reconhecer onde configurar permissões e pontos de aprovação;</li><li>avaliar que processos da escola podem ser delegados.</li></ul>
+<h3>Ao final, você terá</h3><ul><li>roteiro de observação preenchido;</li><li>uma tarefa da escola candidata a agente, com as permissões necessárias.</li></ul>
+</section>
+<section class="cartao" id="baixar"><h2>Arquivos desta atividade</h2><p>Baixe somente o pacote desta atividade. O zip reúne os documentos editáveis; a pasta abaixo permite visualizar cada arquivo em PDF antes de baixar.</p><div class="botoes">
+<a class="botao" href="pacote_06C_demonstracao_agente.zip" download>Pacote completo da atividade (zip) <small>380 KB</small></a>
+<a class="botao sec" href="roteiro_06C_demonstracao_agente.pdf">Roteiro em PDF</a></div>
+<h3>Exemplo preenchido (Escola Horizonte)</h3><ul class="arqs">
+<li><a href="arquivos/exemplo_preenchido/identidade_visual.docx">identidade_visual.docx</a> <a class="pdf" href="visualizar_pdf/exemplo_preenchido/identidade_visual.pdf">ver em PDF</a> <small>88 KB</small></li>
+<li><a href="arquivos/exemplo_preenchido/normas_internas.docx">normas_internas.docx</a> <a class="pdf" href="visualizar_pdf/exemplo_preenchido/normas_internas.pdf">ver em PDF</a> <small>39 KB</small></li>
+<li><a href="arquivos/exemplo_preenchido/perfil_da_escola.docx">perfil_da_escola.docx</a> <a class="pdf" href="visualizar_pdf/exemplo_preenchido/perfil_da_escola.pdf">ver em PDF</a> <small>39 KB</small></li>
+<li><a href="arquivos/exemplo_preenchido/tom_de_voz.docx">tom_de_voz.docx</a> <a class="pdf" href="visualizar_pdf/exemplo_preenchido/tom_de_voz.pdf">ver em PDF</a> <small>39 KB</small></li>
+</ul>
+</section>
+<section class="cartao" id="prompts"><h2>Prompts desta atividade</h2><p>Copie o texto, troque o que está entre [colchetes] pelos dados da sua escola e apague os colchetes. O passo a passo completo está no roteiro em PDF.</p>
+<article class="prompt"><h3>Pedido 1: ler e resumir</h3>
+<p><strong>O que você vai obter:</strong> Um resumo que mostra que o agente consegue ler a pasta da escola no Drive.</p>
+<p><strong>Anexe ou cite:</strong> Nada no chat: o agente lê o Drive pelo conector. Antes, envie ao Drive de teste os documentos de perfil, tom de voz, identidade visual e normas internas (exemplo preenchido, pasta desta atividade).</p>
+<button class="copiar" type="button" data-alvo="p0">Copiar prompt</button><pre id="p0">Papel: você é um agente assistente da <mark>[direção]</mark> da <mark>[Escola Horizonte]</mark>.
+Contexto: estamos testando o que um agente consegue fazer com autorização. Use apenas o Drive de teste.
+Tarefa: leia os documentos da pasta <mark>[Escola Horizonte]</mark> do meu Drive e resuma, em uma página, o perfil da escola e as regras de comunicação.
+Formato: duas seções (perfil e regras de comunicação), com tópicos curtos e a indicação do documento de origem de cada informação.
+Limites: apenas leitura; não altere, mova nem exclua arquivos; se não encontrar a pasta, pergunte antes de continuar.</pre></article>
+<article class="prompt"><h3>Pedido 2: criar o formulário</h3>
+<p><strong>O que você vai obter:</strong> O formulário criado pelo próprio agente, ainda não publicado.</p>
+<p><strong>Anexe ou cite:</strong> Nada: o agente usa o navegador com a conta de teste.</p>
+<button class="copiar" type="button" data-alvo="p1">Copiar prompt</button><pre id="p1">Papel: você é um agente que opera o navegador com a conta de teste da <mark>[Escola Horizonte]</mark>.
+Tarefa: crie no Google Formulários o formulário de inscrição da palestra <mark>[Telas, IA e família]</mark>.
+Perguntas: <mark>[nome do responsável, e-mail, série de interesse]</mark>. Inclua o aviso de uso dos dados (finalidade, prazo de eliminação e contato).
+Limites: não publique, não compartilhe e não envie o link a ninguém sem minha aprovação; não peça dados de crianças.
+Antes de agir: se algo não estiver claro, pergunte. Ao final, descreva o que foi criado e onde pedi aprovação.</pre></article>
+<article class="prompt"><h3>Pedido 3: agendar</h3>
+<p><strong>O que você vai obter:</strong> O evento criado na Agenda pelo próprio agente.</p>
+<p><strong>Anexe ou cite:</strong> Nada: o agente usa a Agenda conectada à conta de teste.</p>
+<button class="copiar" type="button" data-alvo="p2">Copiar prompt</button><pre id="p2">Papel: você é um agente com acesso à Agenda da conta de teste.
+Tarefa: crie o evento <mark>[Palestra para famílias]</mark>, em <mark>[26/11, das 19h às 20h15]</mark>, com a descrição da palestra.
+Limites: mostre o evento antes de salvar e aguarde minha aprovação; não convide participantes.
+Ao final: informe o que foi criado.</pre></article>
+<article class="prompt"><h3>Pedido 4: rascunho de e-mail</h3>
+<p><strong>O que você vai obter:</strong> Um rascunho de e-mail que somente você envia.</p>
+<p><strong>Anexe ou cite:</strong> Nada: o agente usa o Gmail da conta de teste e o link do formulário criado no pedido 2.</p>
+<button class="copiar" type="button" data-alvo="p3">Copiar prompt</button><pre id="p3">Papel: você é um agente com acesso ao Gmail da conta de teste.
+Tarefa: redija o convite às famílias para a palestra, com o link do formulário <mark>[cole o link]</mark>, no tom de voz da escola.
+Critérios: assunto claro; data, horário e local; até <mark>[800]</mark> caracteres.
+Limites: deixe como rascunho; não envie; não preencha destinatários.</pre></article>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> Eventos criados na sua Agenda a partir de um documento, com o plano mostrado antes de criar.</p>
+<p><strong>Anexe ou cite:</strong> Nada no chat: o arquivo perfil_da_escola precisa estar no seu Drive e a Agenda, conectada.</p>
+<button class="copiar" type="button" data-alvo="p4">Copiar prompt</button><pre id="p4">Papel: você é um agente com acesso ao Drive e à Agenda da conta de teste.
+Tarefa: leia o arquivo <mark>[perfil_da_escola]</mark> no meu Drive e crie na Agenda os eventos abertos às famílias listados no documento, com data e descrição.
+Passos: (1) liste os eventos encontrados; (2) mostre o plano de criação; (3) aguarde minha aprovação; (4) crie os eventos.
+Limites: se a data ou o horário de algum evento não estiver claro, pergunte em vez de criar; não convide pessoas.</pre></article>
+</section>
+<p class="rodape-voltar"><a class="botao sec" href="../index.html#programacao">&larr; Voltar à programação</a></p></main><footer>Humus Educação · Oficina "IA para gestores escolares" · Prof.ª Dr.ª Mary Grace Pereira Andrioli</footer>
+<script src="../assets/copiar.js"></script></body></html>

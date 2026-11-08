@@ -1,0 +1,100 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Prática 1 · Roteiro B: página de divulgação de palestra e formulário de inscrição | Humus</title><link rel="stylesheet" href="../assets/estilo.css"></head><body>
+<header class="topo"><a class="voltar" href="../index.html#programacao">&larr; Programação</a>
+<h1>Prática 1 · Roteiro B: página de divulgação de palestra e formulário de inscrição</h1>
+<p class="entrega"><strong>Você entrega:</strong> página da palestra, formulário de inscrição funcionando e resumo das inscrições.</p>
+</header><main>
+<section class="cartao"><h2>Sobre a atividade</h2>
+<h3>Nesta atividade você vai</h3><p>criar uma página (landing page) para divulgar uma palestra para famílias, o formulário de inscrição no Google Formulários e o acompanhamento das respostas.</p>
+<h3>Você vai aprender a</h3><ul><li>planejar um evento com a IA a partir dos documentos da escola;</li><li>escrever um formulário que coleta só o necessário (LGPD);</li><li>gerar uma página web sem programar;</li><li>analisar as inscrições com a IA.</li></ul>
+<h3>Ao final, você terá</h3><ul><li>página da palestra (HTML);</li><li>formulário no Google Formulários;</li><li>resumo das inscrições e mensagem de lembrete.</li></ul>
+</section>
+<section class="cartao" id="baixar"><h2>Arquivos desta atividade</h2><p>Baixe somente o pacote desta atividade. O zip reúne os documentos editáveis; a pasta abaixo permite visualizar cada arquivo em PDF antes de baixar.</p><div class="botoes">
+<a class="botao" href="pacote_05B_pagina_formulario_palestra.zip" download>Pacote completo da atividade (zip) <small>599 KB</small></a>
+<a class="botao sec" href="roteiro_05B_pagina_formulario_palestra.pdf">Roteiro em PDF</a></div>
+<h3>Exemplo preenchido (Escola Horizonte)</h3><ul class="arqs">
+<li><a href="arquivos/exemplo_preenchido/identidade_visual.docx">identidade_visual.docx</a> <a class="pdf" href="visualizar_pdf/exemplo_preenchido/identidade_visual.pdf">ver em PDF</a> <small>88 KB</small></li>
+<li><a href="arquivos/exemplo_preenchido/normas_internas.docx">normas_internas.docx</a> <a class="pdf" href="visualizar_pdf/exemplo_preenchido/normas_internas.pdf">ver em PDF</a> <small>39 KB</small></li>
+<li><a href="arquivos/exemplo_preenchido/perfil_da_escola.docx">perfil_da_escola.docx</a> <a class="pdf" href="visualizar_pdf/exemplo_preenchido/perfil_da_escola.pdf">ver em PDF</a> <small>39 KB</small></li>
+<li><a href="arquivos/exemplo_preenchido/pratica1B_formulario_inscricao.docx">pratica1B_formulario_inscricao.docx</a> <a class="pdf" href="visualizar_pdf/exemplo_preenchido/pratica1B_formulario_inscricao.pdf">ver em PDF</a> <small>38 KB</small></li>
+<li><a href="arquivos/exemplo_preenchido/pratica1B_landing_page_palestra.html">pratica1B_landing_page_palestra.html</a> <small>2 KB</small></li>
+<li><a href="arquivos/exemplo_preenchido/tom_de_voz.docx">tom_de_voz.docx</a> <a class="pdf" href="visualizar_pdf/exemplo_preenchido/tom_de_voz.pdf">ver em PDF</a> <small>39 KB</small></li>
+</ul>
+<h3>Para preencher com a sua escola</h3><ul class="arqs">
+<li><a href="arquivos/para_preencher/identidade_visual.docx">identidade_visual.docx</a> <a class="pdf" href="visualizar_pdf/para_preencher/identidade_visual.pdf">ver em PDF</a> <small>38 KB</small></li>
+<li><a href="arquivos/para_preencher/normas_internas.docx">normas_internas.docx</a> <a class="pdf" href="visualizar_pdf/para_preencher/normas_internas.pdf">ver em PDF</a> <small>38 KB</small></li>
+<li><a href="arquivos/para_preencher/perfil_da_escola.docx">perfil_da_escola.docx</a> <a class="pdf" href="visualizar_pdf/para_preencher/perfil_da_escola.pdf">ver em PDF</a> <small>38 KB</small></li>
+<li><a href="arquivos/para_preencher/tom_de_voz.docx">tom_de_voz.docx</a> <a class="pdf" href="visualizar_pdf/para_preencher/tom_de_voz.pdf">ver em PDF</a> <small>38 KB</small></li>
+</ul>
+<h3>Fontes para anexar à IA</h3><ul class="arqs">
+<li><a href="arquivos/fontes_para_anexar/pratica1B_inscricoes_exemplo.csv">pratica1B_inscricoes_exemplo.csv</a> <small>1 KB</small></li>
+</ul>
+</section>
+<section class="cartao" id="prompts"><h2>Prompts desta atividade</h2><p>Copie o texto, troque o que está entre [colchetes] pelos dados da sua escola e apague os colchetes. O passo a passo completo está no roteiro em PDF.</p>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> A proposta da palestra (título, tópicos, público e convite), que alimentará o formulário e a página.</p>
+<p><strong>Anexe ou cite:</strong> Nada novo: use a conversa do projeto criado no passo 1, com os quatro documentos da escola (perfil, tom de voz, identidade visual e normas internas), do exemplo preenchido ou da sua versão em para_preencher.</p>
+<button class="copiar" type="button" data-alvo="p0">Copiar prompt</button><pre id="p0">Papel: você é a <mark>[coordenação de relacionamento com famílias]</mark> da <mark>[Escola Horizonte]</mark>.
+Contexto: a escola quer oferecer uma palestra para famílias sobre o uso de tecnologia. O evento ocorrerá em <mark>[26/11, às 19h, no auditório]</mark>.
+Fontes: use apenas os documentos anexados ao projeto. Não invente palestrante, instituição parceira, preço ou número de vagas. Se faltar informação importante, pergunte antes de continuar.
+Tarefa: planeje a palestra para <mark>[famílias do Infantil ao 9º ano]</mark> com o tema <mark>[telas, IA e família: como acompanhar]</mark>.
+Critérios: coerência com os princípios do perfil da escola; linguagem acessível a famílias com diferentes níveis de familiaridade com tecnologia; nenhuma promessa de resultado.
+Formato: título (até 8 palavras); subtítulo; três tópicos, com uma frase cada; público; duração; uma frase-convite no tom de voz da escola.
+Limites: não cite marcas de aplicativos; não use medo como argumento.
+Verificação final: indique o que ainda precisa ser confirmado pela escola (palestrante, formato, acessibilidade do auditório).</pre></article>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> O texto do formulário de inscrição, somente com os dados necessários e com o aviso de uso dos dados.</p>
+<p><strong>Anexe ou cite:</strong> Nada novo: continue na mesma conversa. O aviso de dados usa as regras do documento de normas internas, já anexado ao projeto.</p>
+<button class="copiar" type="button" data-alvo="p1">Copiar prompt</button><pre id="p1">Papel: continue como <mark>[coordenação de relacionamento com famílias]</mark> da <mark>[Escola Horizonte]</mark>.
+Contexto: a palestra aprovada no passo anterior exigirá inscrição por formulário online.
+Fontes: proposta da palestra e documento de normas internas. Não invente dados da escola; se faltar algo, pergunte.
+Tarefa: escreva o formulário de inscrição com título, descrição (data, horário e local) e no máximo <mark>[4]</mark> perguntas, apenas as necessárias para inscrever e confirmar a presença.
+Aviso de dados: inclua texto curto com finalidade da coleta, prazo de eliminação dos dados e contato do encarregado, conforme as normas internas.
+Limites: não peça dados de crianças, CPF, fotos ou informações sensíveis; deixe uma pergunta opcional de acessibilidade, sem exigir diagnóstico.
+Formato: tabela com as colunas pergunta, tipo de resposta, obrigatória (sim ou não), finalidade. Ao final, o texto do aviso de dados em um bloco separado.
+Verificação final: confira se cada pergunta tem finalidade clara e se alguma pode ser retirada.</pre></article>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> A página de divulgação da palestra, com botão que leva ao formulário de inscrição.</p>
+<p><strong>Anexe ou cite:</strong> Nada novo: continue na mesma conversa. Cole no prompt o link do formulário criado no passo anterior (Google Forms, Microsoft Forms ou outro).</p>
+<button class="copiar" type="button" data-alvo="p2">Copiar prompt</button><pre id="p2">Papel: você é o desenvolvedor web da <mark>[Escola Horizonte]</mark>.
+Contexto: a página divulgará a palestra aprovada e levará as famílias ao formulário de inscrição.
+Fontes: proposta da palestra, texto do formulário e identidade visual do projeto. Não invente palestrante, preço ou número de vagas.
+Tarefa: crie uma página HTML única (artefato), responsiva para celular e computador.
+Conteúdo: cabeçalho com título e botão &quot;Quero me inscrever&quot;; bloco com data, horário, local e duração; os três tópicos; público; rodapé com o aviso de dados e contato da escola.
+Especificações: cores <mark>[#105E6E, #F2A541, #7ED957]</mark>; fonte <mark>[Inter]</mark>; botões levando a <mark>[cole o link do formulário]</mark>; contraste adequado; textos alternativos nas imagens; nenhuma pessoa nas imagens.
+Formato: um único arquivo HTML, sem dependências externas além da fonte, pronto para publicar.
+Verificação final: confirme que os dois botões usam o link informado e que todas as informações coincidem com a proposta aprovada.</pre></article>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> Um resumo das inscrições para planejar a palestra e o lembrete por e-mail aos inscritos.</p>
+<p><strong>Anexe ou cite:</strong> O arquivo .csv baixado da planilha de respostas. Para treinar, use o arquivo de exemplo da pasta fontes_para_anexar desta atividade (inscrições fictícias).</p>
+<button class="copiar" type="button" data-alvo="p3">Copiar prompt</button><pre id="p3">Papel: você é a secretaria da <mark>[Escola Horizonte]</mark>.
+Contexto: as inscrições da palestra <mark>[título]</mark> foram encerradas e preciso planejar o evento.
+Fontes: use somente o arquivo anexado. Se alguma coluna não estiver clara, pergunte antes de analisar.
+Tarefa: (1) calcule o total de inscrições; (2) agrupe por série ou segmento; (3) agrupe por dia ou turno, se houver; (4) organize as perguntas e dúvidas das famílias em temas, em ordem de frequência.
+Depois, escreva o lembrete por e-mail aos inscritos, com até <mark>[600]</mark> caracteres, no tom da escola, com data, horário, local e orientação de chegada.
+Formato: tabela de resumo e, em seguida, o texto do e-mail.
+Limites: não reproduza nomes, e-mails ou telefones na resposta; não inclua dados individuais no lembrete.
+Verificação final: confira os totais somando as categorias.</pre></article>
+<article class="prompt"><h3>Variação 1: cartaz</h3>
+<p><strong>O que você vai obter:</strong> Um cartaz para o mural da escola.</p>
+<p><strong>Anexe ou cite:</strong> Nada novo: continue na mesma conversa.</p>
+<button class="copiar" type="button" data-alvo="p4">Copiar prompt</button><pre id="p4">Papel: você é o designer gráfico da <mark>[Escola Horizonte]</mark>.
+Tarefa: crie um cartaz <mark>[A4]</mark> da palestra, com título, data, horário, local e espaço reservado para o QR code do formulário.
+Especificações: no máximo <mark>[25]</mark> palavras; cores e fonte da escola; sem pessoas; leitura a 2 metros de distância.
+Formato: artefato ou imagem em alta resolução, com margem de segurança para impressão.</pre></article>
+<article class="prompt"><h3>Variação 2: whatsapp</h3>
+<p><strong>O que você vai obter:</strong> Uma mensagem curta de divulgação para grupos de famílias.</p>
+<p><strong>Anexe ou cite:</strong> Nada novo: continue na mesma conversa, com o link da página.</p>
+<button class="copiar" type="button" data-alvo="p5">Copiar prompt</button><pre id="p5">Papel: você é a <mark>[coordenação de relacionamento com famílias]</mark> da <mark>[Escola Horizonte]</mark>.
+Tarefa: escreva a mensagem de WhatsApp de divulgação da palestra, com até <mark>[300]</mark> caracteres, no tom de voz da escola, com o link <mark>[cole o link da página]</mark>.
+Critérios: data, horário e local na primeira frase; um convite claro; sem excesso de emojis; sem prometer resultados.
+Formato: duas versões, uma mais formal e outra mais acolhedora.</pre></article>
+<article class="prompt"><h3>Variação 3: linguagem simples</h3>
+<p><strong>O que você vai obter:</strong> Uma versão da página mais fácil de ler, em linguagem simples.</p>
+<p><strong>Anexe ou cite:</strong> Nada novo: continue na mesma conversa.</p>
+<button class="copiar" type="button" data-alvo="p6">Copiar prompt</button><pre id="p6">Tarefa: reescreva o texto da página em linguagem simples.
+Critérios: frases de até <mark>[12]</mark> palavras; palavras do cotidiano; um assunto por parágrafo; siglas explicadas; sem termos técnicos desnecessários.
+Formato: devolva a página completa atualizada e liste, ao final, as trocas de vocabulário mais importantes.
+Limites: não altere data, horário, local nem o aviso de dados.</pre></article>
+</section>
+<p class="rodape-voltar"><a class="botao sec" href="../index.html#programacao">&larr; Voltar à programação</a></p></main><footer>Humus Educação · Oficina "IA para gestores escolares" · Prof.ª Dr.ª Mary Grace Pereira Andrioli</footer>
+<script src="../assets/copiar.js"></script></body></html>

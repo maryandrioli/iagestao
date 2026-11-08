@@ -107,6 +107,11 @@ CSS_LINK = '<link rel="stylesheet" href="{r}assets/estilo.css">'
 def cabeca(tit, r=""):
     return f'<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(tit)}</title>{CSS_LINK.format(r=r)}</head><body>'
 
+CHAMADAS = {
+ "09_governanca_plano_acao": ("Política institucional completa", "Depois de preencher as seções 1 a 5 da política de uso, use como base a política institucional editável (minuta com 33 artigos, anexos e formulários, referências comentadas e plano de implantação e consulta à comunidade). Ela está no pacote de continuidade da atividade 10, na pasta para_levar_para_a_escola.", "../10_fechamento/index.html#baixar", "Abrir a atividade 10"),
+ "10_fechamento": ("Política institucional editável", "Este pacote reúne a minuta de política de IA para a escola. Trata-se de proposta de referência: antes de aprovar, confira a vigência dos textos legais e das normas do sistema de ensino, consulte a comunidade escolar e avalie a proteção de dados.", None, None),
+}
+
 def pagina_atividade(p):
     tit = titulo(p); res, ent = resumo(p); pr = prompts(p); ar = arquivos(p); zs = zips(p)
     ro = os.path.basename(glob.glob(f"_ferramentas/roteiros_fonte/roteiro_{p}.docx")[0])[:-5]
@@ -119,6 +124,9 @@ def pagina_atividade(p):
         for k, v in res.items():
             h.append(f'<h3>{esc(k)}</h3>' + ('<ul>' + ''.join(f'<li>{esc(x)}</li>' for x in v) + '</ul>' if len(v) > 1 else f'<p>{esc(v[0])}</p>'))
         h.append('</section>')
+    if p in CHAMADAS:
+        t, tx, lk, lt = CHAMADAS[p]
+        h.append(f'<section class="cartao"><h2>{esc(t)}</h2><p>{esc(tx)}</p>' + (f'<p><a class="botao sec" href="{lk}">{esc(lt)}</a></p>' if lk else '') + '</section>')
     h.append('<section class="cartao" id="baixar"><h2>Arquivos desta atividade</h2><p>Baixe somente o pacote desta atividade. O zip reúne os documentos editáveis; a pasta abaixo permite visualizar cada arquivo em PDF antes de baixar.</p><div class="botoes">')
     for nome, b in zs:
         rot = dict(BUCKETS).get(b, "Pacote completo da atividade") if b else "Pacote completo da atividade (zip)"

@@ -15,7 +15,6 @@ BUCKETS = [("guias_de_apoio","Guias de apoio"),("exemplo_preenchido","Exemplo pr
  ("documentos_de_teste","Documentos de teste (com problemas de propósito)"),("normativas_para_o_notebook","Normas para o notebook do Gemini"),
  ("para_levar_para_a_escola","Para levar para a escola")]
 BLOCOS = [
- ("09:00","09:30","Acolhida e diagnóstico interativo","Responder pelo celular a um questionário anônimo e ver o retrato do grupo.",["01_acolhida_diagnostico"],False),
  ("09:30","10:20","Fundamentos, panorama e cultura de dados","Apresentação dialogada sobre como a IA generativa funciona, as quatro plataformas e o papel do gestor como curador de informação e decisor orientado por dados.",["02_fundamentos"],False),
  ("10:20","10:50","Ética, inclusão e matriz de riscos","Em dupla, classificar situações por probabilidade e impacto em uma matriz 5 × 5, consultar as normativas e configurar o monitoramento de notícias.",["03_etica_matriz_riscos"],False),
  ("10:50","11:10","Coffee break","",[],False),
@@ -27,7 +26,7 @@ BLOCOS = [
  ("15:20","15:45","Laboratório individual","Refazer uma atividade com documentos públicos da própria escola, ou usar a receita de ata de reunião.",["08_laboratorio_individual"],False),
  ("15:45","16:00","Coffee break","",[],False),
  ("16:00","16:40","Governança e gestão de mudança","Roadmap, contas, política de uso, formação docente e plano de ação de 30 dias.",["09_governanca_plano_acao"],False),
- ("16:40","17:00","Fechamento e materiais de apoio","Diagnóstico final, avaliação da oficina e materiais de continuidade.",["10_fechamento"],False),
+ ("16:40","17:00","Fechamento e materiais de apoio","Materiais de continuidade para levar para a escola e orientações para refazer as atividades com a equipe.",["10_fechamento"],False),
 ]
 esc = html.escape
 
@@ -149,14 +148,14 @@ def pagina_atividade(p):
             corpo_h = re.sub(r"(\[[^\]]+\])", r'<mark>\1</mark>', esc(corpo))
             h.append(f'<button class="copiar" type="button" data-alvo="p{i}">Copiar prompt</button><pre id="p{i}">{corpo_h}</pre></article>')
         h.append('</section>')
-    h.append('<p class="rodape-voltar"><a class="botao sec" href="../index.html#programacao">&larr; Voltar à programação</a></p></main><footer>Humus Educação · Oficina "IA para gestores escolares" · Prof.ª Dr.ª Mary Grace Pereira Andrioli</footer>')
+    h.append('<p class="rodape-voltar"><a class="botao sec" href="../index.html#programacao">&larr; Voltar à programação</a></p></main><footer>Oficina elaborada por Mary Grace Pereira Andrioli, contou com apoio técnico e revisão de Mauricio Andrea Andrioli e foi desenhada inicialmente para formação presencial de gestores promovida pela <a href="https://humus.com.br/">Humus Educação</a>.</footer>')
     h.append('<script src="../assets/copiar.js"></script></body></html>')
     open(f"{p}/index.html", "w", encoding="utf-8").write("\n".join(h))
 
 def pagina_inicial():
     c = CFG
     h = [cabeca('Oficina "IA para gestores escolares" | Humus'),
-         f'<header class="hero"><p class="sup">Humus Educação</p><h1>IA para gestores escolares</h1><p>{esc(c["dataExtenso"])} · {esc(c["horario"])}</p></header>',
+         f'<header class="hero"><h1>IA para gestores escolares</h1><p class="autoria">Por Mary Grace P. Andrioli · <a href="https://www.instagram.com/maryandrioli/">@maryandrioli</a> - <a href="https://www.linkedin.com/in/marygrace/">Linkedin</a></p></header>',
          '<nav class="abas"><a href="#antes">Antes da oficina</a><a href="#programacao">Programação e roteiros</a><a href="#combinados">Combinados</a></nav><main>']
     h.append('<section id="antes" class="cartao"><h2>Antes da oficina</h2><p>Reserve cerca de 45 minutos. Baixe apenas os dois pacotes da preparação; os arquivos de cada atividade são baixados na própria atividade, no dia.</p>')
     h.append('<ol><li>Assista aos dois vídeos da preparação.</li><li>Crie as contas e instale o aplicativo do Claude.</li><li>Monte o notebook "Normativas da escola" no Gemini Notebook.</li><li>Crie a pasta <strong>oficina_IA</strong> e marque a lista de conferência do roteiro.</li></ol>')
@@ -174,12 +173,9 @@ def pagina_inicial():
     h.append('</div></section>')
     h.append('<section id="combinados" class="cartao"><h2>Combinados do dia</h2><ul><li><strong>Sem dados pessoais.</strong> Nenhum nome, nota, laudo ou foto de estudantes, famílias ou funcionários entra nas IAs. Na dúvida, não anexe.</li><li><strong>Exemplo ou informação pública.</strong> Use a Escola Horizonte ou documentos públicos da sua escola (site, proposta pedagógica publicada).</li><li><strong>Revisão humana.</strong> Tudo o que a IA produz é rascunho até uma pessoa responsável conferir.</li><li><strong>Sequência completa primeiro.</strong> Faça o roteiro até o fim; as variações vêm depois, se houver tempo.</li></ul>')
     h.append('<h3>Se algo não funcionar</h3><ul><li>Não consigo entrar na plataforma: use uma conta reserva ou faça a atividade em dupla.</li><li>A IA inventou um dado: é esperado. Volte às fontes e acrescente "use apenas os documentos anexados".</li><li>Acabou o limite gratuito: troque de plataforma, pois os prompts funcionam nas quatro.</li><li>Não terminei a atividade: cada roteiro funciona sozinho, e você pode continuar depois.</li></ul>')
-    h.append('<h3>Formulários do dia</h3><ul>')
-    for k, rot in (("diagnostico", "Diagnóstico (início e fim da oficina)"), ("avaliacao", "Avaliação da oficina")):
-        u = c["links"].get(k, "")
-        h.append(f'<li>{rot}: ' + (f'<a href="{esc(u)}">abrir formulário</a>' if u else 'link disponível em breve') + '</li>')
-    h.append(f'</ul><p>Dúvidas: <a href="mailto:{esc(c["contato"])}">{esc(c["contato"])}</a></p></section></main>')
-    h.append('<footer>Humus Educação · Prof.ª Dr.ª Mary Grace Pereira Andrioli</footer></body></html>')
+    h.append('<p>Dúvidas: ')
+    h.append(f'<a href="mailto:{esc(c["contato"])}">{esc(c["contato"])}</a></p></section></main>')
+    h.append('<footer>Oficina elaborada por Mary Grace Pereira Andrioli, contou com apoio técnico e revisão de Mauricio Andrea Andrioli e foi desenhada inicialmente para formação presencial de gestores promovida pela <a href="https://humus.com.br/">Humus Educação</a>.</footer></body></html>')
     open("index.html", "w", encoding="utf-8").write("\n".join(h))
 
 if __name__ == "__main__":

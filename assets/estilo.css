@@ -32,3 +32,5 @@ button.copiar:hover{background:#6CC94A}
 video{width:100%;max-width:640px;display:block;border-radius:8px;background:#000}figure{margin:12px 0}
 .entrega{font-size:1.05rem}footer{text-align:center;padding:24px 16px;font-size:.9rem;color:#3E5366}
 @media (max-width:560px){header.hero h1,header.topo h1{font-size:1.5rem}.prog .bloco{flex-direction:column;gap:4px}}
+.autoria{font-size:.9rem;opacity:.95}.autoria a{color:var(--lima)}
+footer a{color:var(--azul)}

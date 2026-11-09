@@ -1,0 +1,47 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Laboratório · Roteiro C: organizar uma pasta e produzir uma ata como fluxo | Humus</title><link rel="stylesheet" href="../assets/estilo.css"></head><body>
+<header class="topo"><a class="voltar" href="../index.html#programacao">&larr; Programação</a>
+<h1>Laboratório · Roteiro C: organizar uma pasta e produzir uma ata como fluxo</h1>
+<p class="entrega"><strong>Você entrega:</strong> reorganizar arquivos com plano prévio, em uma cópia, e transformar a gravação de uma reunião em ata revisada.</p>
+</header><main>
+<section class="cartao"><h2>Sobre a atividade</h2>
+<h3>Nesta atividade você vai</h3><p>usar a IA para organizar uma pasta de trabalho (nomes, estrutura, versões) e para produzir uma ata de reunião, preservando os originais e a revisão humana.</p>
+<h3>Você vai aprender a</h3><ul><li>trabalhar sempre em uma cópia da pasta;</li><li>pedir um plano de renomeação e de estrutura antes de qualquer alteração;</li><li>evitar problemas com arquivos que estão apenas na nuvem;</li><li>produzir uma ata a partir de transcrição, com pontos de revisão.</li></ul>
+<h3>Ao final, você terá</h3><ul><li>uma pasta organizada (cópia) e o registro das mudanças;</li><li>uma ata em rascunho, revisada por uma pessoa;</li><li>um fluxo reutilizável para a rotina de reuniões.</li></ul>
+</section>
+<section class="cartao" id="baixar"><h2>Arquivos desta atividade</h2><p>Baixe somente o pacote desta atividade. O zip reúne os documentos editáveis; a pasta abaixo permite visualizar cada arquivo em PDF antes de baixar.</p><div class="botoes">
+<a class="botao" href="pacote_08C_pasta_e_ata_fluxo.zip" download>Pacote completo da atividade (zip) <small>149 KB</small></a>
+<a class="botao sec" href="roteiro_08C_pasta_e_ata_fluxo.pdf">Roteiro em PDF</a></div>
+</section>
+<section class="cartao" id="prompts"><h2>Prompts desta atividade</h2><p>Copie o texto, troque o que está entre [colchetes] pelos dados da sua escola e apague os colchetes. O passo a passo completo está no roteiro em PDF.</p>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> Um plano de estrutura e de renomeação, em tabela, sem alteração nos arquivos.</p>
+<p><strong>Anexe ou cite:</strong> A lista de arquivos da cópia da pasta (ou a pasta, se a ferramenta acessar arquivos).</p>
+<button class="copiar" type="button" data-alvo="p0">Copiar prompt</button><pre id="p0">Papel: você é organizador(a) de arquivos de uma equipe escolar.
+Contexto: esta é uma cópia da pasta de trabalho de <mark>[setor ou projeto]</mark>. Quero uma estrutura simples e nomes padronizados.
+Tarefa: (1) proponha uma estrutura de pastas com no máximo <mark>[três]</mark> níveis; (2) proponha um padrão de nome de arquivo (por exemplo, aaaa-mm-dd_assunto_versão); (3) liste, em tabela, o nome atual, o novo nome e a pasta de destino de cada arquivo; (4) indique arquivos duplicados ou versões antigas, sem excluí-los; (5) liste dúvidas sobre arquivos cujo conteúdo você não conseguiu identificar.
+Limites: não altere, mova, renomeie nem exclua nenhum arquivo nesta etapa. Se não conseguir abrir algum arquivo, diga qual. Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> A execução do plano aprovado e um registro das mudanças.</p>
+<p><strong>Anexe ou cite:</strong> A tabela aprovada.</p>
+<button class="copiar" type="button" data-alvo="p1">Copiar prompt</button><pre id="p1">Papel: você é organizador(a) de arquivos.
+Tarefa: execute apenas o plano aprovado, na cópia, sem exclusões. Duplicados e versões antigas vão para uma pasta chamada <mark>[arquivo_morto]</mark>. Ao final, entregue um registro com nome antigo, nome novo, pasta e data, para que eu possa desfazer.
+Limites: pare e pergunte diante de qualquer situação não prevista no plano.
+Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> Um rascunho de ata no modelo da escola, com marcações para a revisão humana.</p>
+<p><strong>Anexe ou cite:</strong> A transcrição da reunião e o modelo de ata.</p>
+<button class="copiar" type="button" data-alvo="p2">Copiar prompt</button><pre id="p2">Papel: você é secretário(a) de reuniões escolares.
+Contexto: a reunião de <mark>[data]</mark> tratou de <mark>[pauta]</mark>. Os participantes concordaram com a gravação.
+Fonte: use somente a transcrição anexada. Não acrescente informações que não tenham sido ditas.
+Tarefa: escreva a ata no modelo anexado, com: participantes, pauta, resumo por item, decisões, responsáveis, prazos e pendências. Marque entre colchetes o que estiver incerto (nomes, prazos, valores) e, ao final, liste o que preciso conferir.
+Limites: não inclua falas literais de estudantes nem informações sobre casos individuais. Não atribua decisão a quem não a tomou. Se um prazo ou responsável não foi dito, escreva <mark>[não definido]</mark>.
+Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+<article class="prompt"><h3>Variação 1: encaminhamentos em tabela</h3>
+<p><strong>O que você vai obter:</strong> Uma tabela de encaminhamentos extraída da ata.</p>
+<p><strong>Anexe ou cite:</strong> A ata aprovada.</p>
+<button class="copiar" type="button" data-alvo="p3">Copiar prompt</button><pre id="p3">Papel: você é assistente de gestão.
+Tarefa: a partir da ata aprovada, monte uma tabela com encaminhamento, responsável, prazo e situação. Use <mark>[não definido]</mark> quando não constar na ata.
+Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+</section>
+<p class="rodape-voltar"><a class="botao sec" href="../index.html#programacao">&larr; Voltar à programação</a></p></main><footer>Oficina elaborada por Mary Grace Pereira Andrioli, contou com apoio técnico e revisão de Mauricio Andrea Andrioli e foi desenhada inicialmente para formação presencial de gestores promovida pela <a href="https://humus.com.br/">Humus Educação</a>.</footer>
+<script src="../assets/copiar.js"></script></body></html>

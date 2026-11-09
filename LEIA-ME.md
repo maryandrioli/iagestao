@@ -14,6 +14,10 @@ Esta pasta é um site estático (pode ser publicado no GitHub Pages) e também p
   - `videos/` (atividades 00 e 02): fora dos zips, por causa do tamanho.
 - Cada pacote repete os arquivos de que precisa (por exemplo, o perfil da escola). A repetição é intencional: a atividade fica autônoma e o zip é pequeno.
 
+## Numeração das atividades
+
+Cada bloco da programação tem uma ou mais atividades identificadas por número e letra (02A e 02B, 03A e 03B, 04A e 04B, 05A a 05F, 06A a 06E, 07A a 07D, 08A a 08C). As atividades 00, 09 e 10 não têm letra. As letras seguintes à A são, em geral, aprofundamentos ou continuidade (ver os selos na página inicial). A página `faq.html` reúne perguntas e respostas baseadas no guia 02B, e o texto delas está em `_ferramentas/faq.py`.
+
 ## Dados do evento
 
 Edite `config.json` (data, horário, contato) e rode:

@@ -1,0 +1,45 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Laboratório · Roteiro B: vídeo curto a partir de uma gravação | Humus</title><link rel="stylesheet" href="../assets/estilo.css"></head><body>
+<header class="topo"><a class="voltar" href="../index.html#programacao">&larr; Programação</a>
+<h1>Laboratório · Roteiro B: vídeo curto a partir de uma gravação</h1>
+<p class="entrega"><strong>Você entrega:</strong> transformar uma gravação longa em um vídeo curto, com consentimento, transcrição com tempos e lista de cortes.</p>
+</header><main>
+<section class="cartao"><h2>Sobre a atividade</h2>
+<h3>Nesta atividade você vai</h3><p>produzir um vídeo curto (por exemplo, para as redes da escola) a partir de uma gravação mais longa, usando a IA para transcrever, selecionar trechos e orientar a edição, conforme os recursos de cada ferramenta.</p>
+<h3>Você vai aprender a</h3><ul><li>verificar consentimento e privacidade antes de usar a gravação;</li><li>pedir a transcrição com marcação de tempo e a seleção de trechos;</li><li>obter lista de cortes, legendas e roteiro de cenas para edição;</li><li>adaptar o pedido às IAs que não editam vídeo.</li></ul>
+<h3>Ao final, você terá</h3><ul><li>uma lista de cortes com tempos;</li><li>um arquivo de legendas (.srt) revisado;</li><li>um roteiro do vídeo e uma capa, para editar em qualquer programa.</li></ul>
+</section>
+<section class="cartao" id="baixar"><h2>Arquivos desta atividade</h2><p>Baixe somente o pacote desta atividade. O zip reúne os documentos editáveis; a pasta abaixo permite visualizar cada arquivo em PDF antes de baixar.</p><div class="botoes">
+<a class="botao" href="pacote_08B_video_curto_gravacao.zip" download>Pacote completo da atividade (zip) <small>145 KB</small></a>
+<a class="botao sec" href="roteiro_08B_video_curto_gravacao.pdf">Roteiro em PDF</a></div>
+</section>
+<section class="cartao" id="prompts"><h2>Prompts desta atividade</h2><p>Copie o texto, troque o que está entre [colchetes] pelos dados da sua escola e apague os colchetes. O passo a passo completo está no roteiro em PDF.</p>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> Uma transcrição com tempos e uma proposta de trechos para um vídeo curto.</p>
+<p><strong>Anexe ou cite:</strong> A gravação (vídeo, áudio) ou a transcrição com tempos.</p>
+<button class="copiar" type="button" data-alvo="p0">Copiar prompt</button><pre id="p0">Papel: você é editor(a) de conteúdo educacional para redes sociais.
+Contexto: o material anexado é <mark>[tipo de gravação]</mark>, com autorização de uso das pessoas que aparecem. O vídeo final será publicado em <mark>[rede]</mark> e deve ter entre <mark>[45 e 90]</mark> segundos.
+Tarefa: (1) transcreva com marcação de tempo no formato <mark>[mm:ss]</mark>; (2) indique os cinco trechos mais significativos para o público <mark>[descrever]</mark>, com o tempo de início e fim e a razão; (3) proponha uma ordem para o vídeo, com abertura de até cinco segundos e chamada final; (4) avise se algum corte pode alterar o sentido do que foi dito.
+Limites: não altere o que foi dito; não invente falas. Se você não conseguir ler o vídeo ou o áudio, diga claramente e peça a transcrição.
+Formato: tabela com tempo, trecho, razão e observações. Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> Lista de cortes, arquivo de legendas e roteiro de cenas, prontos para edição.</p>
+<p><strong>Anexe ou cite:</strong> A transcrição com tempos e a seleção aprovada.</p>
+<button class="copiar" type="button" data-alvo="p1">Copiar prompt</button><pre id="p1">Papel: você é editor(a) de vídeo.
+Tarefa: com a seleção aprovada, entregue: (1) lista de cortes com tempo de início e fim de cada trecho e a ordem final; (2) arquivo de legendas no formato .srt, com no máximo duas linhas por bloco e <mark>[35]</mark> caracteres por linha, sincronizado com os tempos da gravação original; (3) roteiro de cenas com o que aparece na tela, o texto da legenda e a duração de cada cena; (4) texto para a capa e a descrição da publicação, com <mark>[três]</mark> hashtags; (5) sugestão de música de fundo livre de direitos, com cuidado para não encobrir a fala.
+Formato: cada item separado, com título. Se o formato .srt não puder ser gerado como arquivo, escreva o texto em um bloco que eu possa copiar para um arquivo de texto.
+Limites: use o tom de voz e a identidade visual da escola. Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> Uma segunda proposta de edição com outro foco, para comparação.</p>
+<p><strong>Anexe ou cite:</strong> A transcrição e a primeira proposta.</p>
+<button class="copiar" type="button" data-alvo="p2">Copiar prompt</button><pre id="p2">Papel: você é editor(a) de vídeo.
+Tarefa: proponha uma segunda edição do mesmo material com foco em <mark>[mais emoção / mais informação / mais objetividade]</mark>, com ordem de trechos, abertura e chamada final diferentes. Explique em três linhas a diferença em relação à primeira.
+Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+<article class="prompt"><h3>Variação 1: versão somente com texto e imagem</h3>
+<p><strong>O que você vai obter:</strong> Uma versão sem a voz de pessoas, com texto e imagens autorizadas, quando não há autorização de imagem ou voz.</p>
+<p><strong>Anexe ou cite:</strong> A transcrição e o roteiro.</p>
+<button class="copiar" type="button" data-alvo="p3">Copiar prompt</button><pre id="p3">Papel: você é designer de conteúdo.
+Tarefa: crie um roteiro de vídeo com texto animado e imagens livres de direitos ou criadas pela escola, sem usar a voz nem a imagem de ninguém, a partir do conteúdo aprovado.
+Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+</section>
+<p class="rodape-voltar"><a class="botao sec" href="../index.html#programacao">&larr; Voltar à programação</a></p></main><footer>Oficina elaborada por Mary Grace Pereira Andrioli, contou com apoio técnico e revisão de Mauricio Andrea Andrioli e foi desenhada inicialmente para formação presencial de gestores promovida pela <a href="https://humus.com.br/">Humus Educação</a>.</footer>
+<script src="../assets/copiar.js"></script></body></html>

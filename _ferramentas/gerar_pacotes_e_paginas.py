@@ -15,23 +15,27 @@ BUCKETS = [("guias_de_apoio","Guias de apoio"),("exemplo_preenchido","Exemplo pr
  ("documentos_de_teste","Documentos de teste (com problemas de propósito)"),("normativas_para_o_notebook","Normas para o notebook do Gemini"),
  ("para_levar_para_a_escola","Para levar para a escola")]
 BLOCOS = [
- ("09:30","10:20","Fundamentos, panorama e cultura de dados","Apresentação dialogada sobre como a IA generativa funciona, as quatro plataformas e o papel do gestor como curador de informação e decisor orientado por dados.",["02_fundamentos"],False),
- ("10:20","10:50","Ética, inclusão e matriz de riscos","Em dupla, classificar situações por probabilidade e impacto em uma matriz 5 × 5, consultar as normativas e configurar o monitoramento de notícias.",["03_etica_matriz_riscos"],False),
+ ("09:30","10:20","Fundamentos, panorama e cultura de dados","Apresentação dialogada sobre como a IA generativa funciona, as quatro plataformas e o papel do gestor como curador de informação e decisor orientado por dados. O guia de conceitos serve de leitura de apoio e as perguntas frequentes reúnem as respostas.",["02A_fundamentos","02B_conceitos_explicados"],False),
+ ("10:20","10:50","Ética, inclusão e matriz de riscos","Em dupla, classificar situações por probabilidade e impacto em uma matriz 5 × 5, consultar as normativas e configurar o monitoramento de notícias. A versão interativa permite projetar a matriz e alterá-la ao vivo.",["03A_etica_matriz_riscos","03B_matriz_interativa"],False),
  ("10:50","11:10","Coffee break","",[],False),
- ("11:10","11:40","Documento da escola","Edição colaborativa dos documentos que descrevem a escola: perfil, tom de voz, identidade visual e normas internas.",["04_documento_da_escola"],False),
- ("11:40","12:30","Prática 1: engenharia de prompt e comparação entre IAs","Escolha um roteiro, assuma o papel do seu perfil (comunicação, pedagógico ou administrativo) e faça a sequência completa.",["05A_carrossel_projetos","05B_pagina_formulario_palestra","05C_indicadores_relatorio","05D_painel_indicadores"],True),
+ ("11:10","11:40","Documento da escola","Edição colaborativa dos documentos que descrevem a escola: perfil, tom de voz, identidade visual e normas internas. O roteiro B ajuda a observar o tom de voz de outras instituições.",["04A_documento_da_escola","04B_tom_de_voz_perfis_externos"],False),
+ ("11:40","12:30","Prática 1: engenharia de prompt e comparação entre IAs","Escolha um roteiro, assuma o papel do seu perfil (comunicação, pedagógico ou administrativo) e faça a sequência completa. Os roteiros E e F são aprofundamentos para quem concluir antes ou para fazer depois.",["05A_carrossel_projetos","05B_pagina_formulario_palestra","05C_indicadores_relatorio","05D_painel_indicadores","05E_landing_page_publico_externo","05F_ferramenta_local_documentos"],True),
  ("12:30","14:00","Almoço","",[],False),
- ("14:00","14:40","Prática 2: assistentes institucionais e automação","A escola integra a BNCC Computação aos projetos, respeitando a LGPD e o ECA Digital. Escolha um roteiro; no fim, demonstração de um agente.",["06A_assistente_formacao_bncc","06B_assistente_comunicacao","06C_demonstracao_agente"],True),
+ ("14:00","14:40","Prática 2: assistentes institucionais e automação","A escola integra a BNCC Computação aos projetos, respeitando a LGPD e o ECA Digital. Escolha um roteiro; no fim, demonstração de um agente. Os roteiros D e E mostram como registrar um processo como skill e como encadear tarefas com aprovação humana.",["06A_assistente_formacao_bncc","06B_assistente_comunicacao","06C_demonstracao_agente","06D_processo_para_skill","06E_fluxo_encadeado_seguro"],True),
  ("14:40","15:20","Prática 3: validação e acompanhamento formativo","Escolha o revisor que mais interessa: construa o checklist, transforme-o em revisor e teste com um documento que tem problemas de propósito.",["07A_revisor_lgpd_eca_digital","07B_revisor_bncc_computacao","07C_revisor_principios_escola","07D_revisor_plano_aula"],True),
- ("15:20","15:45","Laboratório individual","Refazer uma atividade com documentos públicos da própria escola, ou usar a receita de ata de reunião.",["08_laboratorio_individual"],False),
+ ("15:20","15:45","Laboratório individual","Refazer uma atividade com documentos públicos da própria escola, usar a receita de ata de reunião ou escolher um dos roteiros de continuidade (vídeo curto; organização de pasta e ata).",["08A_laboratorio_individual","08B_video_curto_gravacao","08C_pasta_e_ata_fluxo"],True),
  ("15:45","16:00","Coffee break","",[],False),
  ("16:00","16:40","Governança e gestão de mudança","Roadmap, contas, política de uso, formação docente e plano de ação de 30 dias.",["09_governanca_plano_acao"],False),
  ("16:40","17:00","Fechamento e materiais de apoio","Materiais de continuidade para levar para a escola e orientações para refazer as atividades com a equipe.",["10_fechamento"],False),
 ]
+# Rótulos das atividades que aprofundam ou complementam o núcleo da oficina
+ROTULOS = {"02B_conceitos_explicados":"leitura de apoio","03B_matriz_interativa":"demonstração","04B_tom_de_voz_perfis_externos":"aprofundamento",
+ "05E_landing_page_publico_externo":"aprofundamento","05F_ferramenta_local_documentos":"aprofundamento","06D_processo_para_skill":"aprofundamento",
+ "06E_fluxo_encadeado_seguro":"aprofundamento","08B_video_curto_gravacao":"continuidade","08C_pasta_e_ata_fluxo":"continuidade"}
 esc = html.escape
 
 def atividades():
-    return sorted(d for d in os.listdir(".") if re.match(r"^\d\d[A-D]?_", d) and os.path.isdir(d))
+    return sorted(d for d in os.listdir(".") if re.match(r"^\d\d[A-F]?_", d) and os.path.isdir(d))
 
 def titulo(p):
     d = Document(glob.glob(f"_ferramentas/roteiros_fonte/roteiro_{p}.docx")[0])
@@ -109,6 +113,7 @@ def cabeca(tit, r=""):
 
 CHAMADAS = {
  "09_governanca_plano_acao": ("Política institucional completa", "Depois de preencher as seções 1 a 5 da política de uso, use como base a política institucional editável (minuta com 33 artigos, anexos e formulários, referências comentadas e plano de implantação e consulta à comunidade). Ela está no pacote de continuidade da atividade 10, na pasta para_levar_para_a_escola.", "../10_fechamento/index.html#baixar", "Abrir a atividade 10"),
+ "02B_conceitos_explicados": ("Perguntas e respostas", "As principais dúvidas sobre os conceitos deste guia estão reunidas, em perguntas e respostas, na página de perguntas frequentes.", "../faq.html", "Abrir as perguntas frequentes"),
  "10_fechamento": ("Política institucional editável", "Este pacote reúne a minuta de política de IA para a escola. Trata-se de proposta de referência: antes de aprovar, confira a vigência dos textos legais e das normas do sistema de ensino, consulte a comunidade escolar e avalie a proteção de dados.", None, None),
 }
 
@@ -163,8 +168,8 @@ def pagina_atividade(p):
 def pagina_inicial():
     c = CFG
     h = [cabeca('Oficina "IA para gestores escolares" | Humus'),
-         f'<header class="hero"><h1>IA para gestores escolares</h1><p class="autoria">Por Mary Grace P. Andrioli · <a href="https://www.instagram.com/maryandrioli/">@maryandrioli</a> - <a href="https://www.linkedin.com/in/marygrace/">Linkedin</a></p></header>',
-         '<nav class="abas"><a href="#antes">Antes da oficina</a><a href="#programacao">Programação e roteiros</a><a href="#combinados">Combinados</a></nav><main>']
+         f'<header class="hero"><h1>IA para gestores escolares</h1><p class="lead">Roteiros passo a passo, prompts para copiar e pacotes de arquivos, para usar com qualquer IA.</p><p class="autoria">Por Mary Grace P. Andrioli · <a href="https://www.instagram.com/maryandrioli/">@maryandrioli</a> - <a href="https://www.linkedin.com/in/marygrace/">Linkedin</a></p></header>',
+         '<nav class="abas"><a href="#antes">Antes da oficina</a><a href="#programacao">Programação e roteiros</a><a href="faq.html">Perguntas frequentes</a><a href="#combinados">Combinados</a></nav><main>']
     h.append('<section id="antes" class="cartao"><h2>Antes da oficina</h2><p>Reserve cerca de 45 minutos. Baixe apenas os dois pacotes da preparação; os arquivos de cada atividade são baixados na própria atividade, no dia.</p>')
     h.append('<ol><li>Assista aos dois vídeos da preparação.</li><li>Crie as contas e instale o aplicativo do Claude.</li><li>Monte o notebook "Normativas da escola" no Gemini Notebook.</li><li>Crie a pasta <strong>oficina_IA</strong> e marque a lista de conferência do roteiro.</li></ol>')
     h.append('<p><a class="botao" href="00_antes_da_oficina/index.html">Abrir a preparação</a> <a class="botao sec" href="00_antes_da_oficina/roteiro_00_antes_da_oficina.pdf">Roteiro da preparação (PDF)</a></p></section>')
@@ -175,7 +180,7 @@ def pagina_inicial():
         if escolha: h.append('<p class="dica">Escolha um dos roteiros:</p>')
         if pastas:
             h.append('<ul class="rots">')
-            for p in pastas: h.append(f'<li><a href="{p}/index.html">{esc(titulo(p))}</a></li>')
+            for p in pastas: h.append(f'<li><a href="{p}/index.html">{esc(titulo(p))}</a>' + (f' <span class="selo">{ROTULOS[p]}</span>' if p in ROTULOS else '') + '</li>')
             h.append('</ul>')
         h.append('</div></div>')
     h.append('</div></section>')
@@ -186,6 +191,28 @@ def pagina_inicial():
     h.append('<footer>Oficina elaborada por Mary Grace Pereira Andrioli, contou com apoio técnico e revisão de Mauricio Andrea Andrioli e foi desenhada inicialmente para formação presencial de gestores promovida pela <a href="https://humus.com.br/">Humus Educação</a>.</footer></body></html>')
     open("index.html", "w", encoding="utf-8").write("\n".join(h))
 
+def pagina_faq():
+    sys.path.insert(0, os.path.join(RAIZ, "_ferramentas"))
+    from faq import FAQ
+    grupos = []
+    for g, q, a in FAQ:
+        if not grupos or grupos[-1][0] != g: grupos.append((g, []))
+        grupos[-1][1].append((q, a))
+    h = [cabeca("Perguntas frequentes | Humus"), '<header class="topo"><a class="voltar" href="index.html">&larr; Página inicial</a><h1>Perguntas frequentes</h1><p class="lead">Respostas curtas aos conceitos usados na oficina. O guia completo está na atividade <a href="02B_conceitos_explicados/index.html">02B</a>.</p></header><main>']
+    h.append('<section class="cartao"><label for="busca"><strong>Buscar nas perguntas</strong></label><input id="busca" type="search" placeholder="Digite uma palavra, por exemplo: token, LGPD, agente" autocomplete="off"><p id="vazio" hidden>Nenhuma pergunta encontrada.</p>')
+    h.append('<p class="indice">' + ' '.join(f'<a href="#g{i}">{esc(g)}</a>' for i, (g, _) in enumerate(grupos)) + '</p></section>')
+    n = 0
+    for i, (g, itens) in enumerate(grupos):
+        h.append(f'<section class="cartao grupo" id="g{i}"><h2>{esc(g)}</h2>')
+        for q, a in itens:
+            h.append(f'<details class="faq"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>'); n += 1
+        h.append('</section>')
+    h.append('<p class="aviso">As respostas são simplificadas e podem mudar com a evolução das ferramentas. Nomes de recursos, planos e políticas de dados variam por plataforma: confirme na sua. Sobre normas e proteção de dados, consulte a assessoria jurídica da escola.</p>')
+    h.append('<p class="rodape-voltar"><a class="botao sec" href="index.html">&larr; Voltar à página inicial</a></p></main>')
+    h.append('<footer>Oficina elaborada por Mary Grace Pereira Andrioli, contou com apoio técnico e revisão de Mauricio Andrea Andrioli e foi desenhada inicialmente para formação presencial de gestores promovida pela <a href="https://humus.com.br/">Humus Educação</a>.</footer>')
+    h.append('<script>(function(){var b=document.getElementById("busca");if(!b)return;var it=[].slice.call(document.querySelectorAll("details.faq"));var gr=[].slice.call(document.querySelectorAll(".grupo"));var v=document.getElementById("vazio");function n(t){return t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"")}b.addEventListener("input",function(){var q=n(b.value.trim());var tot=0;it.forEach(function(d){var ok=!q||n(d.textContent).indexOf(q)>-1;d.hidden=!ok;if(ok)tot++;if(q&&ok)d.open=true;if(!q)d.open=false});gr.forEach(function(g){g.hidden=!g.querySelector("details.faq:not([hidden])")});v.hidden=tot>0})})();</script></body></html>')
+    open("faq.html", "w", encoding="utf-8").write("\n".join(h))
+
 if __name__ == "__main__":
     for p in atividades(): pagina_atividade(p); print("ok", p)
-    pagina_inicial(); print("ok index")
+    pagina_inicial(); print("ok index"); pagina_faq(); print("ok faq")

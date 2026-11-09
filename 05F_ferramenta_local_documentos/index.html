@@ -1,0 +1,54 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Prática 1 · Roteiro F: ferramenta local para preencher documentos sem enviar dados | Humus</title><link rel="stylesheet" href="../assets/estilo.css"></head><body>
+<header class="topo"><a class="voltar" href="../index.html#programacao">&larr; Programação</a>
+<h1>Prática 1 · Roteiro F: ferramenta local para preencher documentos sem enviar dados</h1>
+<p class="entrega"><strong>Você entrega:</strong> uma página que gera um documento preenchido no próprio aparelho, sem armazenar dados em servidor.</p>
+</header><main>
+<section class="cartao"><h2>Sobre a atividade</h2>
+<h3>Nesta atividade você vai</h3><p>criar com a IA uma ferramenta simples de preenchimento (por exemplo, de termo, contrato ou autorização), que roda no navegador de quem a usa e não envia nenhuma informação a servidores.</p>
+<h3>Você vai aprender a</h3><ul><li>distinguir um protótipo que roda no aparelho de um sistema que guarda dados;</li><li>especificar campos livres, campos fixos públicos e regras automáticas;</li><li>verificar, antes de usar, que a página não envia dados;</li><li>adaptar a página ao celular.</li></ul>
+<h3>Ao final, você terá</h3><ul><li>uma página HTML que gera o documento em PDF ou Word;</li><li>uma lista de verificação de privacidade preenchida;</li><li>um aviso de uso para quem preencher.</li></ul>
+</section>
+<section class="cartao" id="baixar"><h2>Arquivos desta atividade</h2><p>Baixe somente o pacote desta atividade. O zip reúne os documentos editáveis; a pasta abaixo permite visualizar cada arquivo em PDF antes de baixar.</p><div class="botoes">
+<a class="botao" href="pacote_05F_ferramenta_local_documentos.zip" download>Pacote completo da atividade (zip) <small>148 KB</small></a>
+<a class="botao sec" href="roteiro_05F_ferramenta_local_documentos.pdf">Roteiro em PDF</a></div>
+</section>
+<section class="cartao" id="prompts"><h2>Prompts desta atividade</h2><p>Copie o texto, troque o que está entre [colchetes] pelos dados da sua escola e apague os colchetes. O passo a passo completo está no roteiro em PDF.</p>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> Uma página HTML que preenche o modelo de documento no navegador e gera o arquivo final, sem enviar dados a nenhum servidor.</p>
+<p><strong>Anexe ou cite:</strong> O modelo do documento (arquivo anexado) e a lista de campos livres, fixos e calculados.</p>
+<button class="copiar" type="button" data-alvo="p0">Copiar prompt</button><pre id="p0">Papel: você é desenvolvedor(a) de ferramentas simples para escolas, com foco em proteção de dados e acessibilidade.
+Contexto: a <mark>[nome da escola]</mark> precisa que <mark>[estudantes, famílias ou prestadores]</mark> preencham <mark>[nome do documento]</mark>. Os dados pessoais não podem passar por servidor nem ficar guardados fora do aparelho da pessoa.
+Fonte: use o texto do modelo anexado, sem alterá-lo.
+Tarefa: crie uma página com um formulário cujos campos livres são <mark>[lista de campos]</mark>, com os campos fixos públicos <mark>[lista]</mark> já cadastrados em listas de seleção, e com os campos calculados <mark>[por exemplo, data de início igual à data de preenchimento, sem aceitar datas anteriores]</mark>. À medida que a pessoa preenche, mostre uma pré-visualização do documento. Ao final, gere o documento em <mark>[PDF ou Word]</mark> com o texto do modelo e os campos preenchidos, para a pessoa baixar.
+Formato: um único arquivo HTML com CSS e JavaScript embutidos, sem bibliotecas hospedadas na internet que precisem ser carregadas de fora (se uma biblioteca for indispensável, inclua-a no próprio arquivo), sem cookies, sem armazenamento persistente e sem qualquer envio de dados. Funciona sem internet depois de aberto. Interface simples, em português, com botões grandes, boa leitura no celular e navegação por teclado.
+Limites: não registre, copie nem transmita nenhum dado digitado. No início da página, inclua um aviso curto dizendo que os dados são usados apenas no aparelho para gerar o documento e que o arquivo será entregue por <mark>[canal definido pela escola]</mark>.
+Teste: ao final, descreva como posso verificar que a página não envia dados. Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> Uma lista de verificação de privacidade do código gerado.</p>
+<p><strong>Anexe ou cite:</strong> O arquivo HTML gerado na etapa anterior.</p>
+<button class="copiar" type="button" data-alvo="p1">Copiar prompt</button><pre id="p1">Papel: você é auditor(a) de segurança e proteção de dados.
+Tarefa: leia o código anexado e liste, com o trecho e a linha: (1) qualquer requisição a endereços externos (inclusive fontes, bibliotecas, estatísticas e imagens); (2) qualquer uso de armazenamento local, cookies ou envio de formulário; (3) qualquer dado digitado que possa sair do aparelho; (4) o que precisa ser corrigido para que nada saia do aparelho.
+Formato: tabela com trecho, risco e correção. Se nada for encontrado, explique como você verificou.
+Limites: se não conseguir garantir, diga claramente o que não pôde verificar. Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> Uma segunda versão da página, melhor no celular e com o aviso de privacidade revisado.</p>
+<p><strong>Anexe ou cite:</strong> A página atual e o documento de normas internas da escola.</p>
+<button class="copiar" type="button" data-alvo="p2">Copiar prompt</button><pre id="p2">Papel: você é designer de interfaces para celular.
+Tarefa: ajuste a página anexada para telas de <mark>[360 a 430 pixels]</mark> de largura: campos grandes, teclado adequado a cada campo (número, data, e-mail), mensagens de erro claras e botão para limpar tudo. Revise o aviso de privacidade conforme as normas anexadas e acrescente o prazo e o canal de entrega do documento.
+Formato: arquivo HTML novo, com o nome pagina_v2.html. Não apague nem altere o arquivo anterior.
+Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+<article class="prompt"><h3>Variação 1: contrato da escola para as famílias</h3>
+<p><strong>O que você vai obter:</strong> Uma página em que a família preenche apenas as suas informações, e o restante do contrato permanece como o da escola.</p>
+<p><strong>Anexe ou cite:</strong> O contrato-modelo da escola, revisado pela assessoria jurídica.</p>
+<button class="copiar" type="button" data-alvo="p3">Copiar prompt</button><pre id="p3">Papel: você é desenvolvedor(a) de ferramentas para secretarias escolares.
+Tarefa: gere uma página que preenche somente os campos da família no contrato anexado e mantém o texto da escola intacto, destacando as cláusulas que dependem de decisão da família. Siga as mesmas regras de privacidade: sem servidor, sem armazenamento e com aviso de uso.
+Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+<article class="prompt"><h3>Variação 2: lista de conferência do documento</h3>
+<p><strong>O que você vai obter:</strong> Uma lista de conferência que a pessoa vê antes de gerar o documento.</p>
+<p><strong>Anexe ou cite:</strong> O modelo do documento.</p>
+<button class="copiar" type="button" data-alvo="p4">Copiar prompt</button><pre id="p4">Papel: você é revisor(a) de documentos escolares.
+Tarefa: crie uma lista de conferência de até dez itens para a pessoa verificar antes de gerar o documento (campos obrigatórios, coerência das datas, assinatura), e incorpore-a à página como etapa final.
+Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+</section>
+<p class="rodape-voltar"><a class="botao sec" href="../index.html#programacao">&larr; Voltar à programação</a></p></main><footer>Oficina elaborada por Mary Grace Pereira Andrioli, contou com apoio técnico e revisão de Mauricio Andrea Andrioli e foi desenhada inicialmente para formação presencial de gestores promovida pela <a href="https://humus.com.br/">Humus Educação</a>.</footer>
+<script src="../assets/copiar.js"></script></body></html>

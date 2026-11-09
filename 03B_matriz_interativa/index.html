@@ -1,0 +1,57 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ética e matriz de riscos · Roteiro B: matriz de riscos interativa para classificar e discutir ao vivo | Humus</title><link rel="stylesheet" href="../assets/estilo.css"></head><body>
+<header class="topo"><a class="voltar" href="../index.html#programacao">&larr; Programação</a>
+<h1>Ética e matriz de riscos · Roteiro B: matriz de riscos interativa para classificar e discutir ao vivo</h1>
+<p class="entrega"><strong>Você entrega:</strong> uma matriz de riscos clicável, em um arquivo que abre no navegador, e uma revisão da classificação à luz das normas.</p>
+</header><main>
+<section class="cartao"><h2>Sobre a atividade</h2>
+<h3>Nesta atividade você vai</h3><p>transformar a matriz de riscos que você já preencheu em uma página interativa, para classificar situações em conjunto com a equipe, projetar na tela e alterar ao vivo.</p>
+<h3>Você vai aprender a</h3><ul><li>pedir à IA uma página HTML autônoma (com estilos e programação embutidos);</li><li>usar a página para discutir cada situação e registrar a decisão;</li><li>confrontar a classificação com as normas anexadas e exportar o resultado.</li></ul>
+<h3>Ao final, você terá</h3><ul><li>uma página interativa (arquivo .html) com as situações, as cores e o nome de cada nível de risco;</li><li>um quadro com situações possivelmente subclassificadas e o trecho da norma que as sustenta;</li><li>um PDF ou cartaz da matriz final.</li></ul>
+</section>
+<section class="cartao" id="baixar"><h2>Arquivos desta atividade</h2><p>Baixe somente o pacote desta atividade. O zip reúne os documentos editáveis; a pasta abaixo permite visualizar cada arquivo em PDF antes de baixar.</p><div class="botoes">
+<a class="botao" href="pacote_03B_matriz_interativa.zip" download>Pacote completo da atividade (zip) <small>148 KB</small></a>
+<a class="botao sec" href="roteiro_03B_matriz_interativa.pdf">Roteiro em PDF</a></div>
+</section>
+<section class="cartao" id="prompts"><h2>Prompts desta atividade</h2><p>Copie o texto, troque o que está entre [colchetes] pelos dados da sua escola e apague os colchetes. O passo a passo completo está no roteiro em PDF.</p>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> Uma página HTML que reproduz a sua matriz de riscos, na qual cada situação é clicável e tem cor e nome de risco.</p>
+<p><strong>Anexe ou cite:</strong> A matriz de riscos preenchida (arquivo anexado), com as situações, as dimensões e a escala.</p>
+<button class="copiar" type="button" data-alvo="p0">Copiar prompt</button><pre id="p0">Papel: você é uma pessoa desenvolvedora de materiais educacionais, com foco em acessibilidade e clareza para reuniões presenciais.
+Contexto: sou gestor(a) da escola <mark>[nome da escola]</mark> e vou projetar esta matriz em uma reunião com <mark>[equipe diretiva, coordenação ou docentes]</mark> para classificarmos juntos o risco do uso de IA em situações concretas. Vou alterar a classificação ao vivo.
+Fonte: use exclusivamente as situações, dimensões e escala do arquivo anexado. Não acrescente situações por conta própria.
+Tarefa: gere uma página interativa a partir da matriz anexada, com estas funções:
+1) lista das situações, cada uma clicável;
+2) ao clicar em uma situação, abrir um painel para escolher probabilidade e impacto (ou escolher diretamente o nível de risco), e a cor e o nome do nível aparecerem na mesma hora;
+3) matriz de <mark>[5 × 5]</mark> com as células coloridas pelos níveis <mark>[baixo, moderado, alto, crítico]</mark>, mostrando onde cada situação está posicionada;
+4) resumo no topo com a quantidade de situações por nível, atualizado a cada alteração;
+5) botões para acrescentar, editar e remover situações, e um campo de observação por situação para registrar a decisão da equipe;
+6) botão para imprimir ou salvar em PDF a matriz final.
+Formato: entregue um único arquivo HTML com CSS e JavaScript embutidos, sem bibliotecas externas, sem pedir internet e sem enviar nenhum dado a servidores. Fontes grandes e boa leitura em projetor. Cada nível deve ter cor, nome por extenso e um símbolo. Todos os botões devem funcionar também pelo teclado.
+Limites: não inclua nomes de pessoas, dados de estudantes ou qualquer dado pessoal. Os textos devem estar em português do Brasil, em registro formal.
+Antes de gerar, liste em até cinco itens as suposições que você fará e me pergunte o que estiver faltando. Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> Um quadro com as situações que podem estar subclassificadas ou faltando, cada uma com o trecho da norma que a sustenta.</p>
+<p><strong>Anexe ou cite:</strong> A matriz final (lista de situações e níveis), a LGPD e o ECA Digital em PDF, e, se quiser, o Referencial do MEC.</p>
+<button class="copiar" type="button" data-alvo="p1">Copiar prompt</button><pre id="p1">Papel: você é assessor(a) de governança de dados e proteção de crianças e adolescentes em escolas.
+Contexto: classificamos, com a equipe da <mark>[nome da escola]</mark>, as situações de uso de IA da matriz anexada. Quero conferir se alguma classificação é incompatível com as normas.
+Fontes: use somente os documentos anexados. Se uma norma não tratar da situação, escreva “sem base nas fontes anexadas” e não complete com conhecimento geral.
+Tarefa: para cada situação, diga se o nível escolhido parece adequado, subestimado ou superestimado. Quando for subestimado ou superestimado, cite entre aspas o trecho da norma e indique o artigo ou a página. Ao final, liste até cinco situações relevantes para uma escola que não aparecem na matriz, sempre com a fonte.
+Formato: tabela com as colunas situação, nível escolhido, avaliação, trecho da norma e referência. Depois, três recomendações em frases curtas.
+Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+<article class="prompt"><h3>Variação 1: cartaz a3</h3>
+<p><strong>O que você vai obter:</strong> Um PDF em formato A3 da matriz final, pronto para enviar à gráfica.</p>
+<p><strong>Anexe ou cite:</strong> A matriz final ou a página gerada.</p>
+<button class="copiar" type="button" data-alvo="p2">Copiar prompt</button><pre id="p2">Papel: você é designer de materiais impressos para escolas.
+Tarefa: transforme a matriz final anexada em um cartaz em formato A3, orientação <mark>[horizontal]</mark>, com título, legenda de níveis (cor, nome e símbolo), a matriz e as situações numeradas. Use as cores e a fonte do documento de identidade visual anexado.
+Formato: PDF com margem de segurança de 1 cm e texto legível a dois metros. Não apague nem altere o arquivo original: gere um novo arquivo.
+Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+<article class="prompt"><h3>Variação 2: tutorial para a equipe</h3>
+<p><strong>O que você vai obter:</strong> Um roteiro curto de uso da matriz, para quem não participou da reunião.</p>
+<p><strong>Anexe ou cite:</strong> A página interativa e as decisões registradas.</p>
+<button class="copiar" type="button" data-alvo="p3">Copiar prompt</button><pre id="p3">Papel: você é formador(a) de equipes escolares.
+Tarefa: escreva um tutorial de uma página, em linguagem simples, explicando como ler a matriz, o que significam os níveis e como propor uma alteração. Use exemplos tirados somente das situações anexadas.
+Formato: passos numerados, no máximo 250 palavras.
+Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+</section>
+<p class="rodape-voltar"><a class="botao sec" href="../index.html#programacao">&larr; Voltar à programação</a></p></main><footer>Oficina elaborada por Mary Grace Pereira Andrioli, contou com apoio técnico e revisão de Mauricio Andrea Andrioli e foi desenhada inicialmente para formação presencial de gestores promovida pela <a href="https://humus.com.br/">Humus Educação</a>.</footer>
+<script src="../assets/copiar.js"></script></body></html>

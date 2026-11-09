@@ -1,0 +1,48 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Prática 2 · Roteiro E: fluxo encadeado seguro, com aprovação humana | Humus</title><link rel="stylesheet" href="../assets/estilo.css"></head><body>
+<header class="topo"><a class="voltar" href="../index.html#programacao">&larr; Programação</a>
+<h1>Prática 2 · Roteiro E: fluxo encadeado seguro, com aprovação humana</h1>
+<p class="entrega"><strong>Você entrega:</strong> encadear tarefas (ler, resumir, redigir, enviar) com limites, contas de teste e aprovação humana antes de qualquer envio.</p>
+</header><main>
+<section class="cartao"><h2>Sobre a atividade</h2>
+<h3>Nesta atividade você vai</h3><p>desenhar um fluxo que encadeia várias tarefas (por exemplo, reunir informações, redigir um boletim e enviá-lo) sem entregar à IA decisões que cabem a uma pessoa.</p>
+<h3>Você vai aprender a</h3><ul><li>comparar um pedido apressado com um pedido seguro para a mesma tarefa;</li><li>definir fontes autorizadas, destinatários, limites e pontos de aprovação;</li><li>testar com contas e dados de teste e com envio apenas para si mesma(o);</li><li>agendar uma tarefa recorrente somente depois de validada.</li></ul>
+<h3>Ao final, você terá</h3><ul><li>um fluxo documentado, com entradas, saídas e aprovações;</li><li>um prompt seguro para a tarefa encadeada;</li><li>um plano de teste e um critério para agendar.</li></ul>
+</section>
+<section class="cartao" id="baixar"><h2>Arquivos desta atividade</h2><p>Baixe somente o pacote desta atividade. O zip reúne os documentos editáveis; a pasta abaixo permite visualizar cada arquivo em PDF antes de baixar.</p><div class="botoes">
+<a class="botao" href="pacote_06E_fluxo_encadeado_seguro.zip" download>Pacote completo da atividade (zip) <small>151 KB</small></a>
+<a class="botao sec" href="roteiro_06E_fluxo_encadeado_seguro.pdf">Roteiro em PDF</a></div>
+</section>
+<section class="cartao" id="prompts"><h2>Prompts desta atividade</h2><p>Copie o texto, troque o que está entre [colchetes] pelos dados da sua escola e apague os colchetes. O passo a passo completo está no roteiro em PDF.</p>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> Um boletim redigido a partir de fontes delimitadas, entregue como rascunho para aprovação, sem envio automático.</p>
+<p><strong>Anexe ou cite:</strong> Os arquivos ou a conta de teste que servirão de fonte.</p>
+<button class="copiar" type="button" data-alvo="p0">Copiar prompt</button><pre id="p0">Papel: você é assistente de comunicação da <mark>[nome da escola]</mark>.
+Contexto: preciso de um boletim <mark>[semanal]</mark> para <mark>[famílias]</mark>. Esta é uma execução de teste.
+Fontes autorizadas: somente <mark>[calendário de eventos / pasta X / e-mails com o marcador Y]</mark> do período de <mark>[datas]</mark>. Não use nenhuma outra fonte.
+Exclusões: ignore qualquer item que contenha nomes de estudantes, dados de saúde, informações financeiras, assuntos de pessoal ou o que estiver marcado como confidencial. Liste o que excluiu, sem reproduzir o conteúdo.
+Tarefa: (1) liste os itens que você pretende usar e de qual fonte vêm; (2) aguarde minha confirmação; (3) redija o boletim no tom da escola, com até <mark>[tamanho]</mark>; (4) aponte o que eu preciso conferir (datas, nomes, valores, links).
+Limites: não envie nada. Entregue o texto como rascunho, nesta conversa. Se faltar informação, pergunte; não complete com suposições.
+Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> Um e-mail enviado apenas ao seu endereço, para conferir a formatação e os links.</p>
+<p><strong>Anexe ou cite:</strong> O rascunho aprovado.</p>
+<button class="copiar" type="button" data-alvo="p1">Copiar prompt</button><pre id="p1">Papel: você é assistente de comunicação.
+Tarefa: envie o rascunho aprovado nesta conversa somente para <mark>[meu endereço de e-mail]</mark>. Não use nenhum outro destinatário, nem em cópia ou cópia oculta. Antes de enviar, mostre o assunto, o destinatário e o texto, e aguarde minha confirmação escrita.
+Limites: se qualquer destinatário diferente do meu aparecer, interrompa e avise.
+Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+<article class="prompt"><h3>Prompt para copiar</h3>
+<p><strong>O que você vai obter:</strong> Um plano de agendamento com controles e um plano de interrupção.</p>
+<p><strong>Anexe ou cite:</strong> O prompt seguro validado.</p>
+<button class="copiar" type="button" data-alvo="p2">Copiar prompt</button><pre id="p2">Papel: você é consultor(a) de processos com uso de IA em escolas.
+Tarefa: para o fluxo anexado, descreva: (1) o que precisa estar validado antes de agendar; (2) como agendar com envio apenas para mim nas primeiras execuções; (3) como registrar o que foi feito a cada execução; (4) como interromper o fluxo; (5) riscos que permanecem.
+Formato: lista de verificação.
+Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+<article class="prompt"><h3>Variação 1: mapa de decisões</h3>
+<p><strong>O que você vai obter:</strong> Um mapa do que a IA decide, do que a pessoa decide e do que ninguém deve decidir.</p>
+<p><strong>Anexe ou cite:</strong> A descrição da tarefa.</p>
+<button class="copiar" type="button" data-alvo="p3">Copiar prompt</button><pre id="p3">Papel: você é analista de processos.
+Tarefa: para a tarefa descrita, monte uma tabela com cada decisão do fluxo e indique se cabe à IA, à pessoa responsável ou à direção. Aponte as decisões que não devem ser automatizadas e justifique.
+Se faltar alguma informação importante, não invente: pergunte antes de continuar.</pre></article>
+</section>
+<p class="rodape-voltar"><a class="botao sec" href="../index.html#programacao">&larr; Voltar à programação</a></p></main><footer>Oficina elaborada por Mary Grace Pereira Andrioli, contou com apoio técnico e revisão de Mauricio Andrea Andrioli e foi desenhada inicialmente para formação presencial de gestores promovida pela <a href="https://humus.com.br/">Humus Educação</a>.</footer>
+<script src="../assets/copiar.js"></script></body></html>

@@ -9,7 +9,7 @@
 <h3>Ao final, você terá</h3><ul><li>matriz de riscos da dupla;</li><li>alerta de notícias configurado.</li></ul>
 </section>
 <section class="cartao" id="baixar"><h2>Arquivos desta atividade</h2><p>Baixe somente o pacote desta atividade. O zip reúne os documentos editáveis; a pasta abaixo permite visualizar cada arquivo em PDF antes de baixar.</p><div class="botoes">
-<a class="botao" href="pacote_03A_etica_matriz_riscos.zip" download>Pacote completo da atividade (zip) <small>319 KB</small></a>
+<a class="botao" href="pacote_03A_etica_matriz_riscos.zip" download>Pacote completo da atividade (zip) <small>1.5 MB</small></a>
 <a class="botao sec" href="roteiro_03A_etica_matriz_riscos.pdf">Roteiro em PDF</a></div>
 <h3>Exemplo preenchido (Escola Horizonte)</h3><ul class="arqs">
 <li><a href="arquivos/exemplo_preenchido/catalogo_situacoes_de_risco.docx">catalogo_situacoes_de_risco.docx</a> <a class="pdf" href="visualizar_pdf/exemplo_preenchido/catalogo_situacoes_de_risco.pdf">ver em PDF</a> <small>41 KB</small></li>
@@ -18,16 +18,26 @@
 <h3>Para preencher com a sua escola</h3><ul class="arqs">
 <li><a href="arquivos/para_preencher/matriz_de_riscos.docx">matriz_de_riscos.docx</a> <a class="pdf" href="visualizar_pdf/para_preencher/matriz_de_riscos.pdf">ver em PDF</a> <small>39 KB</small></li>
 </ul>
+<h3>Fontes para anexar à IA</h3><ul class="arqs">
+<li><a href="arquivos/fontes_para_anexar/2015_lei_13146_LBI.pdf">2015_lei_13146_LBI.pdf</a> <small>708 KB</small></li>
+<li><a href="arquivos/fontes_para_anexar/2018_lei_13709_LGPD.pdf">2018_lei_13709_LGPD.pdf</a> <small>674 KB</small></li>
+<li><a href="arquivos/fontes_para_anexar/2025_lei_15211_ECA_Digital.pdf">2025_lei_15211_ECA_Digital.pdf</a> <small>368 KB</small></li>
+</ul>
 </section>
 <section class="cartao" id="prompts"><h2>Prompts desta atividade</h2><p>Copie o texto, troque o que está entre [colchetes] pelos dados da sua escola e apague os colchetes. O passo a passo completo está no roteiro em PDF.</p>
 <article class="prompt"><h3>Prompt para copiar</h3>
 <p><strong>O que você vai obter:</strong> O fundamento legal da situação mais grave da sua matriz, com o trecho original de cada norma e a indicação do que as fontes não cobrem.</p>
-<p><strong>Anexe ou cite:</strong> Nada no chat. Use o notebook &quot;Normativas da escola&quot; (Gemini Notebook), com os PDFs do pacote de preparação. Se preferir outra IA, anexe os PDFs de LGPD e ECA Digital da pasta fontes_para_anexar desta atividade. Tenha à mão a matriz de riscos (para_preencher) com a situação escolhida.</p>
+<p><strong>Anexe ou cite:</strong> Depende do caminho escolhido. Caminho 1 (Gemini Notebook): nada a anexar, pois as normas já estão no notebook “Normativas da escola”. Caminho 2 (outra IA): anexe os PDFs da pasta fontes_para_anexar desta atividade (LGPD, ECA Digital) e, se for o caso, o Referencial do MEC do pacote da atividade 00. Nos dois casos, tenha à mão a matriz de riscos com a situação escolhida.</p>
 <button class="copiar" type="button" data-alvo="p0">Copiar prompt</button><pre id="p0">Papel: você é um consultor de conformidade educacional que apoia a gestão de <mark>[nome da escola]</mark>, escola de educação básica.
 Contexto: a escola avalia o risco da seguinte situação do cotidiano, que envolve o uso de inteligência artificial: <mark>[descreva a situação em uma ou duas frases, sem nomes de pessoas]</mark>.
-Fontes: use somente as fontes deste notebook. Não use conhecimento geral. Se as fontes não tratarem da situação, diga isso de forma explícita.
-Tarefa: indique quais dispositivos da <mark>[LGPD, do ECA Digital ou do Referencial do MEC]</mark> se aplicam à situação e explique por que se aplicam.
-Passos: (1) identifique os dados e as pessoas envolvidas; (2) localize os dispositivos aplicáveis; (3) transcreva o trecho original de cada um, entre aspas; (4) explique em 2 frases a relação com a situação; (5) sugira uma medida de mitigação coerente com o trecho.
+Fontes: use somente os documentos de normas disponíveis nesta conversa (as fontes do notebook ou os PDFs anexados). Não use conhecimento geral nem a internet. Se esses documentos não tratarem da situação, diga isso de forma explícita e não complete a resposta.
+Tarefa: analise a situação à luz de <mark>[LGPD, ECA Digital ou Referencial do MEC]</mark>, seguindo os passos abaixo.
+Passos:
+(1) identifique os dados pessoais e as pessoas envolvidas;
+(2) localize, nos documentos, os dispositivos que se aplicam;
+(3) transcreva o trecho original de cada dispositivo, entre aspas;
+(4) explique, em até duas frases, a relação do trecho com a situação;
+(5) sugira uma medida de mitigação coerente com o trecho.
 Formato: tabela com as colunas norma, artigo, trecho original, relação com a situação, medida de mitigação. Ao final, uma linha com a classificação sugerida (baixo, médio ou alto risco) e a justificativa em até 3 linhas.
 Limites: não invente artigos nem trechos; não substitua parecer jurídico; indique &quot;não localizado nas fontes&quot; quando for o caso.
 Verificação final: confira se todo trecho citado aparece nas fontes e liste o que precisa ser validado por assessoria jurídica.</pre></article>
